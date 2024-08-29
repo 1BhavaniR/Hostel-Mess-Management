@@ -11,13 +11,13 @@
         <div class="overlay">
           <h1>Welcome To TPGIT Hostel</h1>
           <p class="col-lg-7 text-white">
-            We are delighted to introduce this intuitive platform designed to
-            streamline your hostel mess billing experience. Our goal is to
-            provide you with a user-friendly interface that allows you to manage
-            your bills with ease. Whether you're checking your current balance,
-            reviewing past transactions, or making payments, our system is here
-            to make your life simpler and more organized.
-          </p>
+          <div class="quote">
+            <p>"In these halls of learning, where friendships ignite,  
+              Our hostel is a haven, where dreams take flight.  
+              Together we’ll journey, with laughter and cheer,  
+              In this second home, we hold so dear."
+            </p>
+          </div>
         </div>
       </div>
     </div>

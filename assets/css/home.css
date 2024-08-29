@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+
 *,
 *::before,
 *::after {
@@ -41,7 +46,6 @@ body {
   z-index: -1; /* Place the video behind the overlay content */
 }
 
-/* Overlay Content */
 .overlay {
   position: absolute;
   top: 0;
@@ -52,29 +56,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color */
   text-align: center;
-  z-index: 1; 
 }
 
 .overlay h1 {
-  font-size: 3rem;
-  animation: fadeInDown 2s;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-/* Animations */
-@keyframes fadeInDown {
-  from {
-      opacity: 0;
-      transform: translateY(-50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+.quote {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: #fff; /* Text color */
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border-left: 4px solid #f0e6f6;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  line-height: 1.6;
 }
-
 
 
 

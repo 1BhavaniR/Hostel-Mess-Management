@@ -1,8 +1,8 @@
--- Create the database
+
 CREATE DATABASE IF NOT EXISTS mess_management;
 USE mess_management;
 
--- Create the admins table
+
 CREATE TABLE IF NOT EXISTS admins (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS admins (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create the students table
+
 CREATE TABLE IF NOT EXISTS students (
     id INT(12) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,

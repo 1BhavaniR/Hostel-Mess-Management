@@ -11,7 +11,8 @@
                     <img src="assets/images/hostels/b1.png" class="card-img-top" alt="Boys Hostel 1">
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostel 1</h5>
-                        <p class="card-text">Spacious and comfortable living spaces.Modern amenities and friendly environment.</p>
+                        <p class="card-text">Welcome to B1 Hostel.The B1 Hostel offers accommodation for approximately 204 members within the college hostel premises,
+                            providing comfortable living spaces for our students.</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,8 @@
                     <img src="assets/images/hostels/b2.jpeg" class="card-img-top" alt="Boys Hostel 2">
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostel 2</h5>
-                        <p class="card-text">Spacious and comfortable living spaces.Modern amenities and friendly environment.</p>
+                        <p class="card-text">With space for approximately 201 members, the B2 Hostel provides accommodation within the college hostel,
+                            ensuring a convenient living environment for our students</p>
                     </div>
                 </div>
             </div>
@@ -31,7 +33,8 @@
                     <img src="assets/images/hostels/b3.jpeg" class="card-img-top" alt="Boys Hostel 3">
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostel 3</h5>
-                        <p class="card-text">Spacious and comfortable living spaces.Modern amenities and friendly environment.</p>
+                        <p class="card-text">Hosting around 153 members, the B3 Hostel serves as a comfortable residence for our students, 
+                            totally offers accommodation for approximately 120 students in Boy's Hostel contributing to a vibrant living community.</p>
                     </div>
                 </div>
             </div>
@@ -41,7 +44,7 @@
                     <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel 1">
                     <div class="card-body">
                         <h5 class="card-title">Girls' Hostel 1</h5>
-                        <p class="card-text">A home away from home.Safe and secure living with all facilities.</p>
+                        <p class="card-text"></p>
                     </div>
                 </div>
             </div>

@@ -13,10 +13,6 @@
             <h3 class="text-center mb-4">Admin Sign In</h3>
             <form action="./admin_dashboard.php" method="POST">
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
-                </div>
-                <div class="form-group">
                     <label for="userId">User Id</label>
                     <input type="text" class="form-control" id="userId" name="userId" required>
                 </div>

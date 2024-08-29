@@ -9,7 +9,7 @@
           />
         </video>
         <div class="overlay">
-          <h1>Welcome To TPGIT Hostel</h1>
+          <h1>Welcome To TPGIT HOSTEL</h1>
           <p class="col-lg-7 text-white">
           <div class="quote">
             <p>"In these halls of learning, where friendships ignite,  

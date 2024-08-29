@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kalam:wght@300;400;700&family=Pacifico&display=swap');
 
 
 
@@ -61,15 +63,31 @@ body {
   text-align: center;
 }
 
-.overlay h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+ .overlay h1 {
+  font-family: "Kalam", cursive;
+  font-size: 3.5rem;
+  color: rgb(250, 244, 244);
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+.overlay h1::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 50%;
+  height: 4px;
+  background: #fff;
+  border-radius: 5px;
+  transform: translateX(-50%);
 }
 
 .quote {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 1.5em;
-  color: #fff; /* Text color */
+  color: rgb(204, 202, 202); /* Text color */
   max-width: 80%;
   margin: 0 auto;
   padding: 20px;
@@ -78,6 +96,9 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   line-height: 1.6;
+}
+.quote p{
+  font-family: "Pacifico", cursive;
 }
 
 

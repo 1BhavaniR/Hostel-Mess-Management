@@ -1,0 +1,397 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+.navbar-brand img {
+  height: 40px; /* Adjust the height to fit your navbar */
+  width: auto; /* Maintain aspect ratio */
+}
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding-top: 80px;
+  padding-top: calc(
+    80px + 10px
+  ); /* Adjust this value to the height of your fixed navbar */
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px); /* Full viewport height minus header and footer */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire container */
+  z-index: -1; /* Place the video behind the overlay content */
+}
+
+/* Overlay Content */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  text-align: center;
+  z-index: 1; 
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  animation: fadeInDown 2s;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+/* Custom Styles for Features Section */
+#features {
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 60px 0; /* Padding for top and bottom */
+}
+
+.feature-box {
+  background: #fff; /* White background for each feature box */
+  padding: 20px; /* Padding inside each feature box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.feature-box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.icon {
+  font-size: 3rem; 
+  color: #088178; 
+}
+#features {
+  padding: 60px 0; /* Padding for top and bottom */
+}
+
+.feature-box {
+  background: #fff; /* White background for each feature box */
+  padding: 20px; /* Padding inside each feature box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center align text */
+  position: relative; /* Position relative for the hover effect */
+  height: 200px; /* Fixed height for all boxes */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Column layout for icon and text */
+  justify-content: center; /* Center content vertically */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.feature-box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.feature-box .icon {
+  font-size: 3rem; /* Larger icon size */
+  color: #088178; /* Primary color for icons */
+}
+
+.feature-box h3.h5 {
+  margin: 15px 0; /* Space around the heading */
+}
+
+.feature-description {
+  display: none; /* Hide description by default */
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Position at the bottom of the feature box */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+  color: #fff; /* White text color */
+  padding: 15px; /* Padding inside the description box */
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transform: translateY(100%); /* Hide below the box initially */
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for showing */
+}
+
+.feature-box:hover .feature-description {
+  display: block; /* Show description on hover */
+  transform: translateY(0); /* Slide up to visible position */
+  opacity: 1; /* Ensure full opacity */
+}
+#vision-mission .card {
+  border-radius: 0.5rem;
+}
+
+#vision-mission .card-body {
+  padding: 2rem;
+}
+
+#vision-mission .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#vision-mission .card-text,
+#vision-mission ul {
+  font-size: 1rem;
+}
+
+footer {
+  padding: 8vw;
+  background-color: #101c32;
+  color: #7b838a;
+}
+
+footer .footer-col {
+  margin-bottom: 40px;
+}
+
+footer h4 {
+  color: rgb(241, 240, 245);
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+footer li {
+  list-style: none;
+  color: #7b838a;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer .pro-links i {
+  background-color: rgba(128, 128, 128, 0.3);
+  color: #fff;
+  padding: 10px 13px;
+  border: 1px solid rgb(21, 21, 100);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer .pro-links i:hover {
+  background-color: #fdc93b;
+  color: rgb(21, 21, 100);
+}
+
+@media (max-width: 768px) {
+  footer .footer-col {
+    width: 100%; /* Full width for footer columns on smaller screens */
+  }
+}
+.content-wrapper {
+  padding-top: 80px; /* Adjust to match navbar height */
+}
+
+.section-p1 {
+  margin-top: 80px;
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+#contact-details {
+  margin-top: 80px; /* Margin before the contact section */
+  padding: 0 15px; /* Ensure padding on both sides */
+}
+
+#contact-details .details {
+  padding-left: 15px;
+}
+
+#contact-details .details span,
+#form-details form span {
+  font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#contact-details .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#contact-details .details li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+#contact-details .details li i {
+  font-size: 14px;
+  padding-right: 15px;
+}
+
+#contact-details .details li p {
+  margin: 0;
+  font-size: 16px;
+  color: #465b52;
+}
+
+#contact-details .map {
+  height: 400px;
+  overflow: hidden; /* Prevents horizontal scrolling */
+  margin-top: 30px; /* Margin to separate from content above */
+}
+
+#contact-details .map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#form-details {
+  margin: 30px 15px; /* Margin to fit within viewport */
+  padding: 40px;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+}
+
+#form-details form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+
+#form-details form button {
+  background-color: #088178;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#form-details form button:hover {
+  background-color: #065f5d;
+}
+
+#footer {
+  margin-top: 25px;
+}
+
+footer {
+  padding: 4vw; /* Adjusted for better responsiveness */
+  background-color: #101c32;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .footer-col {
+  padding-bottom: 40px;
+}
+
+footer h4 {
+  color: rgb(241, 240, 245);
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  color: #7b838a;
+  padding: 10px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer li a {
+  color: #adadad;
+  text-decoration: none;
+}
+
+footer li a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  color: #c2c6c9;
+}
+
+footer .pro-links {
+  margin-top: 10px;
+}
+
+footer .pro-links a {
+  background-color: rgba(128, 128, 128, 0.3);
+  color: #fff;
+  padding: 10px 13px;
+  border: 1px solid rgb(21, 21, 100);
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+footer .pro-links a:hover {
+  background-color: white;
+  color: rgb(21, 21, 100);
+}
+
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+footer .copyright p {
+  color: #fff;
+}

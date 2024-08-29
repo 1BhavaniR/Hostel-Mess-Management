@@ -1,0 +1,46 @@
+/* General body styling */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Card styling */
+.card {
+  border-radius: 10px;
+  border: none;
+}
+
+.card h3 {
+  font-weight: 700;
+  color: #343a40;
+}
+
+/* Input field styling */
+.form-control {
+  border-radius: 5px;
+  height: 45px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #007bff;
+}
+
+/* Button styling */
+.btn {
+  border-radius: 5px;
+  font-size: 18px;
+  height: 45px;
+}
+
+/* Forgot password link */
+.text-secondary:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Centering form on the page */
+.container {
+  padding: 30px;
+}

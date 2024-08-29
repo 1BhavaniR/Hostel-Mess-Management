@@ -1,0 +1,26 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Hide horizontal overflow if necessary */
+}
+
+body {
+  overflow-y: auto; /* Ensure vertical scrolling is enabled */
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+
+
+
+.container {
+  overflow: auto; /* Allow scrolling within container if needed */
+}
+

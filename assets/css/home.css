@@ -17,6 +17,9 @@
   box-sizing: border-box;
   font-family: "Spartan", sans-serif;
 }
+.navbar-brand{
+  font-family: "Kalam", cursive;
+}
 .navbar-brand img {
   height: 40px; /* Adjust the height to fit your navbar */
   width: auto; /* Maintain aspect ratio */

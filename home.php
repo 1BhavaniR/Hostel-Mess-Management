@@ -9,15 +9,13 @@
           />
         </video>
         <div class="overlay">
-          <h1>Welcome To TPGIT HOSTEL</h1>
+          <h1>Welcome To TPGIT Hostel</h1>
           <p class="col-lg-7 text-white">
           <div class="quote">
-            <p>"In these halls of learning, where friendships ignite,  
-              Our hostel is a haven, where dreams take flight.  
-              Together we’ll journey, with laughter and cheer,  
-              In this second home, we hold so dear."
+            <p>“Hostel life: Where every corner sparks new friendships, and every day ignites your journey of growth.”
             </p>
           </div>
+          </p>
         </div>
       </div>
     </div>

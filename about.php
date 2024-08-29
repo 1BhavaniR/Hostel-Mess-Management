@@ -1,7 +1,7 @@
 <?php include('includes/header.php'); ?>
 
 <div class="content">
-    <div class="container mt-5">
+    <div class="container about mt-5">
         <h2 class="text-center mb-4">About Our College Hostels</h2>
 
         <div class="row">

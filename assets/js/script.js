@@ -8,7 +8,7 @@ $(document).ready(function() {
 $(document).ready(function(){
     // Initialize the carousel with a smoother transition
     $('#carouselFacilities').carousel({
-        interval: 500 // Adjust the interval for automatic sliding (in milliseconds)
+        interval: 1000 // Adjust the interval for automatic sliding (in milliseconds)
     });
 
     // Handle the scaling of items during transitions
@@ -22,3 +22,4 @@ $(document).ready(function(){
         $('.carousel-item.active .facility-item').css('transform', 'scale(1.2)');
     });
 });
+

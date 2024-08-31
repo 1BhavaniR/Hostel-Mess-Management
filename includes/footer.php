@@ -43,7 +43,7 @@
         <div class="col-md-4 footer-col">
           <div class="d-flex flex-column align-items-start">
             <p class="mb-2">
-              Copyright ⓒ2024 All rights reserved
+              Copyright ⓒ 2024 All rights reserved
             </p>
             <div class="pro-links">
               <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>

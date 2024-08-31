@@ -1,7 +1,8 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kalam:wght@300;400;700&family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
@@ -18,23 +19,20 @@
   font-family: "Spartan", sans-serif;
 }
 .navbar-brand{
-  font-family: "Kalam", cursive;
+  font-family: "Pacifico", cursive;
 }
-.navbar-brand img {
-  height: 40px; /* Adjust the height to fit your navbar */
-  width: auto; /* Maintain aspect ratio */
-}
+
 body {
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; 
   padding-top: 80px;
   padding-top: calc(
     80px + 10px
-  ); /* Adjust this value to the height of your fixed navbar */
+  ); 
 }
 .video-container {
   position: relative;
   width: 100%;
-  height: calc(100vh - 50px); /* Full viewport height minus header and footer */
+  height: calc(100vh - 0px); 
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -47,8 +45,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the video covers the entire container */
-  z-index: -1; /* Place the video behind the overlay content */
+  object-fit: cover; 
+  z-index: -1; 
 }
 
 .overlay {
@@ -61,13 +59,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white; /* Text color */
+  background: rgba(0, 0, 0, 0.5); 
+  color: white; 
   text-align: center;
 }
 
- .overlay h1 {
-  font-family: "Kalam", cursive;
+ .overlay h1{
   font-size: 3.5rem;
   color: rgb(250, 244, 244);
   position: relative;
@@ -75,7 +72,7 @@ body {
   margin: 0;
 }
 
-.overlay h1::before {
+ .overlay h1::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -85,17 +82,17 @@ body {
   background: #fff;
   border-radius: 5px;
   transform: translateX(-50%);
-}
+} 
 
 .quote {
   font-family: "Pacifico", cursive;
   font-size: 1.5em;
-  color: rgb(204, 202, 202); /* Text color */
+  color: rgb(204, 202, 202); 
   max-width: 80%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   border-left: 4px solid #f0e6f6;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   line-height: 1.6;
@@ -108,21 +105,21 @@ body {
 
 /* Custom Styles for Features Section */
 #features {
-  background-color: #f8f9fa; /* Light background for contrast */
-  padding: 60px 0; /* Padding for top and bottom */
+  background-color: #f8f9fa; 
+  padding: 60px 0; 
 }
 
 .feature-box {
-  background: #fff; /* White background for each feature box */
-  padding: 20px; /* Padding inside each feature box */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, -0.1); 
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .feature-box:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .icon {
@@ -130,25 +127,25 @@ body {
   color: #088178; 
 }
 #features {
-  padding: 60px 0; /* Padding for top and bottom */
+  padding: 60px 0; 
 }
 
 .feature-box {
-  background: #fff; /* White background for each feature box */
-  padding: 20px; /* Padding inside each feature box */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Center align text */
-  position: relative; /* Position relative for the hover effect */
-  height: 200px; /* Fixed height for all boxes */
-  display: flex; /* Flexbox for centering content */
-  flex-direction: column; /* Column layout for icon and text */
-  justify-content: center; /* Center content vertically */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center; 
+  position: relative; 
+  height: 200px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .feature-box:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
+  transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
@@ -162,25 +159,26 @@ body {
 }
 
 .feature-description {
-  display: none; /* Hide description by default */
-  position: absolute; /* Absolute positioning */
-  bottom: 0; /* Position at the bottom of the feature box */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width */
-  background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
-  color: #fff; /* White text color */
-  padding: 15px; /* Padding inside the description box */
-  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  transform: translateY(100%); /* Hide below the box initially */
-  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for showing */
+  display: none; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  background: rgba(0, 0, 0, 0.3); 
+  color: black; 
+  padding: 15px; 
+  border-radius: 0 0 8px 8px; 
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); 
+  transform: translateY(100%);
+  transition: transform 0.3s, opacity 0.3s; 
 }
 
 .feature-box:hover .feature-description {
-  display: block; /* Show description on hover */
-  transform: translateY(0); /* Slide up to visible position */
-  opacity: 1; /* Ensure full opacity */
+  display: block; 
+  transform: translateY(0); 
+  opacity: 1; 
 }
+
 #vision-mission .card {
   border-radius: 0.5rem;
 }

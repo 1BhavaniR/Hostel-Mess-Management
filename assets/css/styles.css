@@ -2,13 +2,12 @@
 html, body {
   height: 100%;
   margin: 0;
-  overflow-x: hidden; /* Hide horizontal overflow if necessary */
+  overflow-x: hidden; 
 }
 
 body {
-  overflow-y: auto; /* Ensure vertical scrolling is enabled */
+  overflow-y: auto; 
 }
-
 /* Header */
 header {
   width: 100%;
@@ -21,6 +20,6 @@ header {
 
 
 .container {
-  overflow: auto; /* Allow scrolling within container if needed */
+  overflow: auto; 
 }
 

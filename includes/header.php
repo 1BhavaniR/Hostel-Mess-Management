@@ -9,9 +9,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
-
- <script
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script
       src="https://kit.fontawesome.com/cfb9468fde.js"
       crossorigin="anonymous"
     ></script>
@@ -21,6 +28,7 @@
     />
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <style>
         body {
             margin: 0;
@@ -31,19 +39,19 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px; /* Adjust based on your header height */
-            background-color: #343a40; /* Background color of the header */
-            z-index: 1000; /* Ensure it is above other content */
+            height: 60px;
+            background-color: #343a40; 
+            z-index: 1000; 
         }
         .content {
-            padding-top: 60px; /* Height of your fixed header */
-            padding-bottom: 60px; /* Height of your fixed footer */
+            padding-top: 60px; 
+            padding-bottom: 60px; 
         }
         .card-img-top {
             width: 100%;
-            height: 200px; /* Adjust this height as needed */
-            object-fit: cover; /* Ensures that the image covers the area without distortion */
-            border-bottom: 1px solid #ddd; /* Optional: Adds a border below the image */
+            height: 200px; 
+            object-fit: cover; 
+            border-bottom: 1px solid #ddd; 
         }
         .card {
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -80,8 +88,8 @@
 
 
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="home.php">TPGIT DORMS</a>
-        <!-- <img src="assets\images\hostels\logo1.jpeg"> -->
+        <img src="assets/images/hostels/tpgit_logo.png" alt="logo" style="height: 50px;margin:10px;">
+        <h3><a  href="home.php" style="text-decoration:none;color:white;font-family: Roboto Condensed, sans-serif;">TPGIT DORMS</a></h3>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

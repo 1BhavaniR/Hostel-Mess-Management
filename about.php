@@ -44,7 +44,7 @@
                     <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel 1">
                     <div class="card-body">
                         <h5 class="card-title">Girls' Hostel 1</h5>
-                        <p class="card-text"></p>
+                        <p class="card-text">A home away from home.Safe and secure living with all facilities.</p>
                     </div>
                 </div>
             </div>

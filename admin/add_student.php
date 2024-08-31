@@ -1,5 +1,5 @@
 <?php
-include('../includes/header.php');
+
 include('../includes/db.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -52,4 +52,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </div>
 
-<?php include('../includes/footer.php'); ?>

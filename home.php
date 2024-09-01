@@ -146,6 +146,7 @@
     <section id="provide" class="container my-5">
       <h1 class="text-center mb-4">What we provide?</h1>
     </section>
+    <!-- vision and mission section -->
     <section id="vision-mission" class="py-5">
       <h1 class="text-center mb-4">VISION & MISSION</h1>
       <div class="container">
@@ -191,7 +192,6 @@
         </div>
       </div>
     </section>
-
     
 
    

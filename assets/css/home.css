@@ -65,23 +65,11 @@ body {
 }
 
  .overlay h1{
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: rgb(250, 244, 244);
   position: relative;
   text-align: center;
   margin: 0;
-}
-
- .overlay h1::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  width: 50%;
-  height: 4px;
-  background: #fff;
-  border-radius: 5px;
-  transform: translateX(-50%);
 } 
 
 .quote {
@@ -90,17 +78,17 @@ body {
   color: rgb(204, 202, 202); 
   max-width: 80%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 60px;
   border-left: 4px solid #f0e6f6;
   background-color: rgba(0, 0, 0, 0.6); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   line-height: 1.6;
 }
+
 .quote p{
   font-family: "Pacifico", cursive;
 }
-
 
 
 /* Custom Styles for Features Section */

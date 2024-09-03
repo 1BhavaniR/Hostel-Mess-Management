@@ -87,38 +87,41 @@
 <header>
 
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="assets/images/hostels/tpgit_logo.png" alt="logo" style="height: 50px;margin:10px;">
-        <h3><a  href="home.php" style="text-decoration:none;color:white;font-family: Roboto Condensed, sans-serif;">TPGIT DORMS</a></h3>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="User Guide.php">Reimbursement</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Log In
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="student\student_login.php">Student Login</a>
-                        <a class="dropdown-item" href="admin\admin_login.php">Admin Login</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.php">
+        <img src="assets/images/hostels/tpgit_logo.png" alt="logo" style="height: 50px;">
+        <h3 class="d-inline align-middle ml-2">TPGIT DORMS</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="home.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="User Guide.php">Reimbursement</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Log In
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="student/student_login.php">Student Login</a>
+                    <a class="dropdown-item" href="admin/admin_login.php">Admin Login</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 </header>
 
 

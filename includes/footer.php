@@ -14,21 +14,22 @@
         <div class="col-md-2 footer-col">
           <h4>Quick Links</h4>
           <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="about.php">About Us</a></li>
             <li><a href="#">Reimbursement</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="signin.php">Log In</a></li>
 
           </ul>
         </div>
         <div class="col-md-2 footer-col">
-          <h4>Features</h4>
+          <h4>Departments</h4>
           <ul class="list-unstyled">
-            <li>Manage Reputation</li>
-            <li>Power Tools</li>
-            <li>Managed Website</li>
-            <li>Marketing Services</li>
+            <li><a href="https://tpgit.edu.in/index.php/departments/mechanical-engineering/"> BE MECH Dept</a></li>
+            <li><a href="https://tpgit.edu.in/index.php/departments/elec-comm-engineering/">BE ECE Dept</a></li>
+            <li><a href="https://tpgit.edu.in/index.php/departments/civil-engineering/">BE CIVIL Dept</a></li>
+            <li><a href="https://tpgit.edu.in/index.php/departments/b-e-electrical-and-electronics-engineering/">BE EEE Dept</a></li>
+            <li><a href="https://tpgit.edu.in/index.php/departments/b-e-computer-science-engineering/">BE CSE Dept</a></li>
           </ul>
         </div>
         <div class="col-md-2 footer-col">

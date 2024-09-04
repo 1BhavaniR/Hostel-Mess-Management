@@ -18,6 +18,60 @@
   font-family: "Pacifico", cursive;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #343a40; 
+  z-index: 1000; 
+}
+/* Styling for active nav link */
+.navbar-nav .nav-item .nav-link.active {
+  color: #f0a500; /* Highlight color for the active link */
+  font-weight: bold;
+  border-bottom: 2px solid #f0a500; /* Optional: underline effect */
+}
+
+/* Adjust the brand logo and text alignment */
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-brand h3 {
+  display: inline;
+  color: #ffffff;
+  margin-left: 10px;
+  
+}
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+/* Styling for active nav link */
+.navbar-nav .nav-item .nav-link.active {
+  color: #f0a500; /* Highlight color for the active link */
+  font-weight: bold;
+  border-bottom: 2px solid #f0a500; /* Optional: underline effect */
+}
+
+/* Adjust the brand logo and text alignment */
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-brand h3 {
+  display: inline;
+  color: #ffffff;
+  margin-left: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
 body {
   overflow-x: hidden;
   padding-top: 80px;
@@ -95,9 +149,12 @@ body {
   font-family: "Pacifico", cursive;
 }
 
+<<<<<<< HEAD
 .quote p {
   font-family: "Pacifico", cursive;
 }
+=======
+>>>>>>> bffdffdce7d25bda7893d7df707742b053431cbc
 /* Custom Styles for Features Section */
 #features {
   background-color: #f8f9fa;

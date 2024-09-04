@@ -19,6 +19,29 @@
         </div>
       </div>
     </div>
+    <div class="section container my-5 py-5">
+
+  <div class="section-content text-center">
+  <i class="fas fa-quote-left"></i>
+    <p class="mb-4">
+    
+
+      At TPGIT, we take immense pride in offering our students a vibrant and enriching living experience that perfectly complements their academic journey. Our state-of-the-art hostel facilities are meticulously designed to provide a secure, comfortable, and supportive environment, fostering both personal and academic growth.
+    </p>
+    <p class="mb-4">
+      Our hostels stand out for their modern amenities, which include spacious rooms, high-speed internet, and well-maintained recreational areas. Each room is thoughtfully equipped with essential furnishings, ensuring that students have everything they need to focus on their studies while enjoying a homely atmosphere. Additionally, our dedicated housekeeping staff ensures that cleanliness and hygiene are upheld to the highest standards.
+    </p>
+    <p>
+      Beyond the physical comforts, the hostel environment at TPGIT promotes a strong sense of community and camaraderie. With various student-led activities and events organized throughout the year, residents have ample opportunities to engage with peers, develop leadership skills, and create lasting friendships. This vibrant community spirit is a hallmark of our hostel life, contributing significantly to the overall college experience.
+  
+
+    </p>
+    <i class="fas fa-quote-right"></i>
+  </div>
+</div>
+
+
+
     <section id="features" class="container my-5">
       <h1 class="text-center mb-4">Awesome Features</h1>
       <p class="text-center mb-5">
@@ -155,6 +178,9 @@
           <div class="col-md-6 mb-4">
             <div class="card text-center h-100">
               <div class="card-body bg-secondary text-white">
+              <i class="fas fa-eye vicon "></i>
+              <br>
+
                 <h3 class="card-title">Vision of the Institute</h3>
                 <p class="card-text text-white">
                   To provide a high-quality learning environment through
@@ -169,6 +195,9 @@
           <div class="col-md-6 mb-4">
             <div class="card text-center h-100">
               <div class="card-body bg-secondary text-white">
+              <i class="fas fa-bullseye micon"></i> 
+              <br>
+
                 <h3 class="card-title">Mission of the Institute</h3>
                 <ul class="list-unstyled">
                   <li class="mb-2">
@@ -192,7 +221,45 @@
         </div>
       </div>
     </section>
-    
+    <section id="vision-mission" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mb-4">
+        <div class="custom-card text-start h-100 border-0 shadow-none p-1">
+          <div class="custom-card-body bg-none text-dark p-2" >
+            <h2 class="mb-4">Guidelines</h2>
+            <ul class="custom-list">
+              <li class="mb-2">Confirm that you are authorized to stay within the hostel premises and only occupy the room officially assigned to you. Do not use or sleep in rooms that are assigned to other residents without prior permission. This ensures orderly living arrangements and respects the privacy of others.</li>
+              <li class="mb-2">Keep only essential items in your room to minimize the risk of theft. The hostel authorities are not liable for any loss or theft of personal belongings, so take necessary precautions to secure your valuables and avoid storing them in the hostel.</li>
+              <li class="mb-2">Dress appropriately and maintain a respectful appearance while in the hostel. A decent dress code contributes to a positive living environment and ensures that all residents feel comfortable and respected.</li>
+              <li class="mb-2">Immediately report any cases of contagious diseases to the Warden, Deputy Warden, Resident Tutors, or hostel information service. Prompt reporting helps in implementing preventive measures to protect the health of all residents.</li>
+              <li class="mb-3">Be present in the hostel after 5:30 p.m. and remain on the premises during class hours and other institutional obligations. If an emergency arises, communicate it clearly and seek approval from the Warden to avoid any issues related to attendance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1 mb-4"></div>
+
+      <div class="col-md-6 mb-4">
+  <div class="custom-card text-start h-100 border-0 shadow-none p-4">
+    <div class="custom-card-body bg-dark text-white p-4">
+      <h2 class="mb-4">Prohibitions</h2>
+      <ul class="custom-list">
+        <li class="mb-2">Do not permit unauthorized guests or outsiders to enter the hostel or its rooms. Allowing unauthorized individuals inside could lead to disciplinary action or expulsion, as it compromises the security and safety of the hostel.</li>
+        <li class="mb-2">Do not occupy or transfer to rooms that are not officially assigned to you. Unauthorized use or swapping of rooms is prohibited, ensuring that room assignments are respected and orderly.</li>
+        <li class="mb-2">Avoid storing costly or highly valuable items in the hostel. The hostel is not responsible for the loss or theft of such items, so it is wise to secure valuables elsewhere to prevent potential theft.</li>
+        <li class="mb-2">Do not allow day scholars inside the hostel. Facilitating their stay or access to your room will result in disciplinary measures, as day scholars are not permitted within the hostel premises.</li>
+        <li class="mb-3">Do not neglect the requirement to be present in the hostel after 5:30 p.m. and during other scheduled times. Failure to comply with attendance rules without proper notification or approval from the Warden could lead to disciplinary action.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
 
    
   

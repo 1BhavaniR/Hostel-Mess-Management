@@ -38,8 +38,78 @@
     </p>
     <i class="fas fa-quote-right"></i>
   </div>
-</div>
+    </div>
+    <!-- visionsection -->
+    <section id="vision" class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Vision Box -->
+      <div class="col-md-10 mb-4">
+        <div class="card text-start h-100 border-0 shadow-none">
+          <div class="card-body p-4" style="background-color: #e0e8f2">
+            <div class="text-center mb-4">
+              <h3 class="card-title text-start mt-1" style="color: black">Vision</h3>
+            </div>
+            <ol class="custom-list" style="color: black">
+              <li>
+                
+                To provide a high-quality learning environment through innovative teaching.
+              </li>
+              <li>
+                
+                To promote research to produce globally competitive engineers of excellent quality.
+              </li>
+              <li>
+               
+                To make the students feel at home.
+              </li>
+              <li>
+               
+                To inculcate discipline and to make students more systematic and strategic.
+              </li>
+            </ol>
+          </div>
+        </div>
 
+      </div>
+      <div>
+        <img src="assets/images/hostels/g1.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Mission Box -->
+<section id="mission" class="py-5">
+  <div class="container">
+    <div class="row">
+    
+      <div class="col-md-10 mb-4">
+        <div class="card text-start h-100 border-0 shadow-none">
+          <div class="card-body p-4" style="background-color: #e0e8f2">
+            <div class="text-center mb-4">
+              <h3 class="card-title text-start mt-1" style="color: black">Mission</h3>
+            </div>
+            <ol class="custom-list" style="color: black">
+              <li>
+                
+              To offer education programmes that blend intensive technical training with appropriate guidance inculcating analytical skills and problem solving ability with high degree of professionalism.
+              </li>
+              <li>
+                
+              To provide healthy environment with excellent facilities for learning, research and innovative thinking.
+              </li>
+              <li>
+               
+              To educate the students achieve their professional excellence with ethical and social responsibilities.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <section id="features" class="container my-5">
@@ -169,59 +239,10 @@
     <section id="provide" class="container my-5">
       <h1 class="text-center mb-4">What we provide?</h1>
     </section>
-    <!-- vision and mission section -->
-    <section id="vision-mission" class="py-5">
-      <h1 class="text-center mb-4">VISION & MISSION</h1>
-      <div class="container">
-        <div class="row">
-          <!-- Vision Box -->
-          <div class="col-md-6 mb-4">
-            <div class="card text-center h-100">
-              <div class="card-body bg-secondary text-white">
-              <i class="fas fa-eye vicon "></i>
-              <br>
 
-                <h3 class="card-title">Vision of the Institute</h3>
-                <p class="card-text text-white">
-                  To provide a high-quality learning environment through
-                  innovative teaching and promote research to produce globally
-                  competitive engineers of excellent quality.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <!-- Mission Box -->
-          <div class="col-md-6 mb-4">
-            <div class="card text-center h-100">
-              <div class="card-body bg-secondary text-white">
-              <i class="fas fa-bullseye micon"></i> 
-              <br>
-
-                <h3 class="card-title">Mission of the Institute</h3>
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    To offer education programs that blend intensive technical
-                    training with appropriate guidance, inculcating analytical
-                    skills and problem-solving ability with a high degree of
-                    professionalism.
-                  </li>
-                  <li class="mb-2">
-                    To provide a healthy environment with excellent facilities
-                    for learning, research, and innovative thinking.
-                  </li>
-                  <li>
-                    To educate students to achieve their professional excellence
-                    with ethical and social responsibilities.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="vision-mission" class="py-5">
+     <!-- rules and regulations section -->
+    <section id="rules-reulations" class="py-5">
   <div class="container">
     <div class="row">
       <div class="col-md-5 mb-4">
@@ -245,7 +266,7 @@
     <div class="custom-card-body bg-dark text-white p-4">
       <h2 class="mb-4">Prohibitions</h2>
       <ul class="custom-list">
-        <li class="mb-2">Do not permit unauthorized guests or outsiders to enter the hostel or its rooms. Allowing unauthorized individuals inside could lead to disciplinary action or expulsion, as it compromises the security and safety of the hostel.</li>
+        <li class="mb-1">Do not permit unauthorized guests or outsiders to enter the hostel or its rooms. Allowing unauthorized individuals inside could lead to disciplinary action or expulsion, as it compromises the security and safety of the hostel.</li>
         <li class="mb-2">Do not occupy or transfer to rooms that are not officially assigned to you. Unauthorized use or swapping of rooms is prohibited, ensuring that room assignments are respected and orderly.</li>
         <li class="mb-2">Avoid storing costly or highly valuable items in the hostel. The hostel is not responsible for the loss or theft of such items, so it is wise to secure valuables elsewhere to prevent potential theft.</li>
         <li class="mb-2">Do not allow day scholars inside the hostel. Facilitating their stay or access to your room will result in disciplinary measures, as day scholars are not permitted within the hostel premises.</li>

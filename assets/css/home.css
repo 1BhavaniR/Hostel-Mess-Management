@@ -58,18 +58,12 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
 .overlay h1 {
   font-size: 3.5rem;
-=======
- .overlay h1{
-  font-size: 3rem;
->>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
   color: rgb(250, 244, 244);
   position: relative;
   text-align: center;
   margin: 0;
-<<<<<<< HEAD
 }
 
 .overlay h1::before {
@@ -83,9 +77,6 @@ body {
   border-radius: 5px;
   transform: translateX(-50%);
 }
-=======
-} 
->>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
 
 .quote {
   font-family: "Pacifico", cursive;
@@ -100,19 +91,13 @@ body {
   border-radius: 8px;
   line-height: 1.6;
 }
-<<<<<<< HEAD
 .quote p {
   font-family: "Pacifico", cursive;
 }
 
-=======
-
-.quote p{
+.quote p {
   font-family: "Pacifico", cursive;
 }
-
-
->>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
 /* Custom Styles for Features Section */
 #features {
   background-color: #f8f9fa;
@@ -188,29 +173,48 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-.micon,
-.vicon {
-  font-size: 2rem;
-  color: #fff;
+.card {
+  border: none; /* Removes default border */
+  box-shadow: none; /* Removes default shadow */
 }
 
-#vision-mission .card {
-  border-radius: 0.5rem;
+.card-body {
+  background-color: #e0e8f2;
+  padding: 2rem; /* Adds padding inside the card body */
 }
 
-#vision-mission .card-body {
-  padding: 2rem;
+.custom-list {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0; /* Removes default padding */
 }
 
-#vision-mission .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+.custom-list li {
+  display: flex; /* Aligns icons and text */
+  align-items: center; /* Centers the icon and text vertically */
+  margin-bottom: 1rem; /* Adds margin between list items */
 }
 
-#vision-mission .card-text,
-#vision-mission ul {
-  font-size: 1rem;
+.custom-list .icon {
+  color: #f0f0f0; /* Sets icon color to match the theme */
+  font-size: 1.2rem; /* Sets icon size */
 }
+
+.card-title {
+  font-size: 1.75rem; /* Increases font size for the title */
+}
+
+.text-center {
+  text-align: center; /* Centers content within the text-center class */
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem; /* Adjusts margin bottom for spacing */
+}
+
+.mt-3 {
+  margin-top: 1rem; /* Adds margin-top to separate title from icon */
+}
+
 .custom-card {
   border: none;
   box-shadow: none;
@@ -228,7 +232,7 @@ body {
 }
 
 .custom-list li {
-  padding: 40px;
+  padding: 6px;
   margin-bottom: 1rem; /* Adjusts spacing between list items */
 }
 

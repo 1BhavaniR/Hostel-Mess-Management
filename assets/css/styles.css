@@ -15,6 +15,24 @@ header {
   top: 0;
   z-index: 1000;
 }
+/* Styling for active nav link */
+.navbar-nav .nav-item .nav-link.active {
+  color: #f0a500; /* Highlight color for the active link */
+  font-weight: bold;
+  border-bottom: 2px solid #f0a500; /* Optional: underline effect */
+}
+
+/* Adjust the brand logo and text alignment */
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-brand h3 {
+  display: inline;
+  color: #ffffff;
+  margin-left: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 
 
 

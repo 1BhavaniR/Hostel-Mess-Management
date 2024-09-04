@@ -58,12 +58,18 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .overlay h1 {
   font-size: 3.5rem;
+=======
+ .overlay h1{
+  font-size: 3rem;
+>>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
   color: rgb(250, 244, 244);
   position: relative;
   text-align: center;
   margin: 0;
+<<<<<<< HEAD
 }
 
 .overlay h1::before {
@@ -77,6 +83,9 @@ body {
   border-radius: 5px;
   transform: translateX(-50%);
 }
+=======
+} 
+>>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
 
 .quote {
   font-family: "Pacifico", cursive;
@@ -84,17 +93,26 @@ body {
   color: rgb(204, 202, 202);
   max-width: 80%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 60px;
   border-left: 4px solid #f0e6f6;
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   line-height: 1.6;
 }
+<<<<<<< HEAD
 .quote p {
   font-family: "Pacifico", cursive;
 }
 
+=======
+
+.quote p{
+  font-family: "Pacifico", cursive;
+}
+
+
+>>>>>>> bee82b24367c92523a221a168e4a4b07cae9de41
 /* Custom Styles for Features Section */
 #features {
   background-color: #f8f9fa;

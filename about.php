@@ -10,7 +10,7 @@
                 <div class="card">
                     <img src="assets/images/hostels/b1.png" class="card-img-top" alt="Boys Hostel 1">
                     <div class="card-body">
-                        <h5 class="card-title">Boys' Hostel 1</h5>
+                        <h5 class="card-title">Boys' Hostel </h5>
                         <p class="card-text">Welcome to B1 Hostel.The B1 Hostel offers accommodation for approximately 204 members within the college hostel premises,
                             providing comfortable living spaces for our students.</p>
                     </div>

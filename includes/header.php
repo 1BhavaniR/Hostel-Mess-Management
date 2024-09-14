@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <style>
         body {
             margin: 0;
@@ -117,6 +118,8 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="student/student_login.php">Student Login</a>
                     <a class="dropdown-item" href="admin/admin_login.php">Admin Login</a>
+                    <a class="dropdown-item" href="mess_manager/mess_dashboard.php">Mess Login</a>
+
                 </div>
             </li>
         </ul>

@@ -1,8 +1,11 @@
 
+-- Create the database if it doesn't already exist
 CREATE DATABASE IF NOT EXISTS mess_management;
+
+-- Switch to the newly created database
 USE mess_management;
 
-
+-- Create the 'admins' table
 CREATE TABLE IF NOT EXISTS admins (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -11,7 +14,7 @@ CREATE TABLE IF NOT EXISTS admins (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
+-- Create the 'students' table
 CREATE TABLE IF NOT EXISTS students (
     id INT(12) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -19,6 +22,6 @@ CREATE TABLE IF NOT EXISTS students (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- -- Insert a sample admin user
--- INSERT INTO admins (username, email, password) VALUES 
--- ('admin', 'admin@example.com', '12345');
+-- Insert a sample admin user
+INSERT INTO admins (username, email, password) VALUES 
+('admin', 'admin@example.com', '12345');

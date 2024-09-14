@@ -1,27 +1,23 @@
 <?php
+include 'includes/db.php';
 
-include('../includes/db.php');
+session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $regno = $_POST['regno'];
-    $name = $_POST['name'];
-    $mobile = $_POST['mobile'];
-    $dept = $_POST['dept'];
-    $year = $_POST['year'];
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: admin_login.php');
+    exit;
+}
 
-    $sql = "INSERT INTO students (regno, name, mobile, dept, year) VALUES (:regno, :name, :mobile, :dept, :year)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':regno', $regno);
-    $stmt->bindParam(':name', $name);
-    $stmt->bindParam(':mobile', $mobile);
-    $stmt->bindParam(':dept', $dept);
-    $stmt->bindParam(':year', $year);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    if ($stmt->execute()) {
-        echo "Student added successfully!";
-    } else {
-        echo "Error: " . $stmt->errorInfo()[2];
-    }
+    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+
+    $stmt = $pdo->prepare("INSERT INTO students (email, password) VALUES (?, ?)");
+    $stmt->execute([$email, $hashed_password]);
+
+    echo "Student added successfully.";
 }
 ?>
 

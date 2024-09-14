@@ -1,3 +1,52 @@
+<?php
+include 'db.php';
+
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $stmt = $pdo->prepare("SELECT * FROM students WHERE email = ?");
+    $stmt->execute([$email]);
+    $student = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($student && password_verify($password, $student['password'])) {
+        $_SESSION['student_id'] = $student['id'];
+        header('Location: student_dashboard.php');
+        exit;
+    } else {
+        echo "Invalid login credentials.";
+    }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

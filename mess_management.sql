@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS mess_management;
 USE mess_management;
 

@@ -50,6 +50,8 @@
             <div class="text-center mb-4">
               <h3 class="card-title text-start mt-1" style="color: black">Vision</h3>
             </div>
+            <div class="visioncontent">
+            <div>
             <ol class="custom-list" style="color: black">
               <li>
                 
@@ -68,13 +70,19 @@
                 To inculcate discipline and to make students more systematic and strategic.
               </li>
             </ol>
+            </div>
+            
+            
+
+            </div>
+         
           </div>
+          
         </div>
+        
 
       </div>
-      <div>
-        <img src="assets/images/hostels/g1.jpeg" alt="">
-      </div>
+      
     </div>
   </div>
 </section>

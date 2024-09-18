@@ -1,35 +1,40 @@
 <?php
-include 'db.php';
-
 session_start();
+include '../includes/db.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $admin_email = $_POST['email'];
+    $admin_password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM admins WHERE username = ?");
-    $stmt->execute([$username]);
+    // Prepare a SQL statement to check admin credentials
+    $stmt = $pdo->prepare("SELECT * FROM admins WHERE email = :email");
+    $stmt->bindParam(':email', $admin_email);
+    $stmt->execute();
+
     $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($admin && password_verify($password, $admin['password'])) {
+    // Verify if the admin exists and password matches
+    if ($admin && password_verify($admin_password, $admin['password'])) {
+        // Set session variables
         $_SESSION['admin_id'] = $admin['id'];
-        header('Location: admin_dashboard.php');
-        exit;
+        $_SESSION['admin_email'] = $admin['email'];
+        
+        // Successful login, redirect to admin dashboard
+        header("Location: admin_dashboard.php");
+        exit();
     } else {
-        echo "Invalid login credentials.";
+        // Error: Invalid email or password
+        $error_message = "Invalid login credentials";
     }
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin login</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
@@ -37,10 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
             <h3 class="text-center mb-4">Admin Sign In</h3>
-            <form action="./admin_dashboard.php" method="POST">
+            <?php if (isset($error_message)) : ?>
+                <div class="alert alert-danger"><?php echo $error_message; ?></div>
+            <?php endif; ?>
+            <form action="" method="POST">
                 <div class="form-group">
-                    <label for="userId">User Id</label>
-                    <input type="text" class="form-control" id="userId" name="userId" required>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
@@ -60,4 +68,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-

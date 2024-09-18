@@ -1,28 +1,19 @@
 <?php
-// Include the database connection
-include('includes/db.php');
+include '../includes/db.php';
 
-// Define the admin credentials
-$username = 'admin';
-$email = 'admin@example.com';
-$password = '12345'; // Replace this with the desired password
+// Predefined default password
+$default_password = 'admin123';
 
-// Hash the password
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+// Hash the default password
+$hashed_password = password_hash($default_password, PASSWORD_DEFAULT);
 
-// Prepare SQL statement to insert the admin user
-$sql = "INSERT INTO admins (username, email, password) VALUES (:username, :email, :password)";
-$stmt = $conn->prepare($sql);
+// Insert default admin credentials into the database (if they don't already exist)
+$admin_email = 'admin@example.com'; // Use a default admin email
 
-// Bind the parameters
-$stmt->bindParam(':username', $username);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':password', $hashedPassword);
+$stmt = $pdo->prepare("INSERT INTO admins (email, password) VALUES (:email, :password) ON DUPLICATE KEY UPDATE password = :password");
+$stmt->bindParam(':email', $admin_email);
+$stmt->bindParam(':password', $hashed_password);
+$stmt->execute();
 
-// Execute the statement
-if ($stmt->execute()) {
-    echo "Admin user created successfully!";
-} else {
-    echo "Error: " . $stmt->errorInfo()[2];
-}
+echo "Admin account with default password created.";
 ?>

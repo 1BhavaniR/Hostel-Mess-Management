@@ -1,16 +1,17 @@
 <?php
-// db.php
-
-$host = 'localhost';
-$dbname = 'mess_management';
-$user = 'root';
-$pass = '';
+$host = 'localhost';  // Database host
+$dbname = 'mess_management';  // Database name
+$username = 'root';  // Database username
+$password = '';  // Database password
 
 try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Create a new PDO instance
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    // Set the PDO error mode to exception for better error handling
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    exit();
+    // Handle connection error
+    die("Connection failed: " . $e->getMessage());
 }
 ?>

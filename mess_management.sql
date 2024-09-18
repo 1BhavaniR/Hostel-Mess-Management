@@ -1,11 +1,10 @@
-
--- Create the database if it doesn't already exist
+-- Create database if it doesn't exist
 CREATE DATABASE IF NOT EXISTS mess_management;
 
--- Switch to the newly created database
+-- Select the database
 USE mess_management;
 
--- Create the 'admins' table
+-- Create the 'admins' table if it doesn't exist
 CREATE TABLE IF NOT EXISTS admins (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL UNIQUE,
@@ -14,14 +13,13 @@ CREATE TABLE IF NOT EXISTS admins (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create the 'students' table
-CREATE TABLE IF NOT EXISTS students (
-    id INT(12) AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Insert a sample admin user
+-- Insert admin user with a raw password (hash the password later using PHP)
+-- Note: Replace 'admin123' with the hashed version of the password later
 INSERT INTO admins (username, email, password) VALUES 
-('admin', 'admin@example.com', '12345');
+('admin', 'admin@example.com', 'admin123');
+CREATE TABLE mess_menu (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    day VARCHAR(10) NOT NULL,
+    meal_time VARCHAR(10) NOT NULL,
+    menu TEXT NOT NULL
+);

@@ -24,8 +24,8 @@ header {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #343a40; 
-  z-index: 1000; 
+  background-color: #343a40;
+  z-index: 1000;
 }
 /* Styling for active nav link */
 .navbar-nav .nav-item .nav-link.active {
@@ -43,7 +43,6 @@ header {
   display: inline;
   color: #ffffff;
   margin-left: 10px;
-  
 }
 header {
   width: 100%;
@@ -67,10 +66,12 @@ header {
   display: inline;
   color: #ffffff;
   margin-left: 10px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
-
-
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row;
+  margin-right: 150px;
+}
 
 body {
   overflow-x: hidden;
@@ -143,12 +144,18 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  line-height: 1.6;
+  line-height: 0.6;
 }
 .quote p {
   font-family: "Pacifico", cursive;
 }
-
+/* .quote p {
+  font-family: "Pacifico", cursive;
+} */
+.visioncontent {
+  display: flex;
+  flex-direction: row;
+}
 /* Custom Styles for Features Section */
 #features {
   background-color: #f8f9fa;
@@ -224,29 +231,48 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-.micon,
-.vicon {
-  font-size: 2rem;
-  color: #fff;
+.card {
+  border: none; /* Removes default border */
+  box-shadow: none; /* Removes default shadow */
 }
 
-#vision-mission .card {
-  border-radius: 0.5rem;
+.card-body {
+  background-color: #e0e8f2;
+  padding: 2rem; /* Adds padding inside the card body */
 }
 
-#vision-mission .card-body {
-  padding: 2rem;
+.custom-list {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0; /* Removes default padding */
 }
 
-#vision-mission .card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+.custom-list li {
+  display: flex; /* Aligns icons and text */
+  align-items: center; /* Centers the icon and text vertically */
+  margin-bottom: 1rem; /* Adds margin between list items */
 }
 
-#vision-mission .card-text,
-#vision-mission ul {
-  font-size: 1rem;
+.custom-list .icon {
+  color: #f0f0f0; /* Sets icon color to match the theme */
+  font-size: 1.2rem; /* Sets icon size */
 }
+
+.card-title {
+  font-size: 1.75rem; /* Increases font size for the title */
+}
+
+.text-center {
+  text-align: center; /* Centers content within the text-center class */
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem; /* Adjusts margin bottom for spacing */
+}
+
+.mt-3 {
+  margin-top: 1rem; /* Adds margin-top to separate title from icon */
+}
+
 .custom-card {
   border: none;
   box-shadow: none;
@@ -264,7 +290,7 @@ body {
 }
 
 .custom-list li {
-  padding: 40px;
+  padding: 6px;
   margin-bottom: 1rem; /* Adjusts spacing between list items */
 }
 

@@ -1,3 +1,5 @@
+<title>TPGI STUDENT PORTAL</title>
+<link rel="icon" href="assets/images/logos/tpgit_logo.png" type="image/png" />
 <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">

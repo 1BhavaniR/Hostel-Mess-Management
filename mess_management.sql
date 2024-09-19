@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 -- Create database if it doesn't exist
-=======
->>>>>>> 5a17b1a77962884b5e30974a328aa5e4dfe4dff2
 CREATE DATABASE IF NOT EXISTS mess_management;
 
 -- Select the database

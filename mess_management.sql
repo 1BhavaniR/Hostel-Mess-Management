@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 -- Create database if it doesn't exist
-=======
->>>>>>> 5a17b1a77962884b5e30974a328aa5e4dfe4dff2
 CREATE DATABASE IF NOT EXISTS mess_management;
 
 -- Select the database
@@ -20,7 +17,9 @@ CREATE TABLE IF NOT EXISTS admins (
 -- Note: Replace 'admin123' with the hashed version of the password later
 INSERT INTO admins (username, email, password) VALUES 
 ('admin', 'admin@example.com', 'admin123');
-CREATE TABLE mess_menu (
+
+-- Create the 'mess_menu' table
+CREATE TABLE IF NOT EXISTS mess_menu (
     id INT AUTO_INCREMENT PRIMARY KEY,
     day VARCHAR(10) NOT NULL,
     meal_time VARCHAR(10) NOT NULL,

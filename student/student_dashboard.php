@@ -23,6 +23,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mess_menu.php"><i class="fas fa-wallet"></i> Mess Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="queries.php"><i class="fas fa-question-circle"></i> <!-- Question circle icon -->
+                Raise Queries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="change-password.php"><i class="fas fa-lock"></i>
+                Update Password</a>
+            </li>
         </ul>
     </div>
     <div class="content">
@@ -34,7 +45,7 @@
                             <i class="card-icon fas fa-user-plus"></i>
                             <h5 class="card-title">User Profile</h5>
                             <p class="card-text"> View and Manage Your Profile flawlessly</p>
-                            <a href="add_student.php" class="btn bg-dark text-white btn-primary">View</a>
+                            <a href="user_profile.php" class="btn bg-dark text-white btn-primary">View</a>
                         </div>
                     </div>
                 </div>

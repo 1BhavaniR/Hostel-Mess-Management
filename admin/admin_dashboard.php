@@ -63,6 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="admin_dashboard.php?action=update_password"><i class="fas fa-key"></i> Update Password</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="admin_dashboard.php?action=update_password"><i class="fas fa-key"></i> View Queries</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
         </ul>

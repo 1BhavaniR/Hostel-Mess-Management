@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/db.php';
+include '../includes/dbconn.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $admin_email = $_POST['email'];

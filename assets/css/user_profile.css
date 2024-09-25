@@ -23,48 +23,44 @@ body {
   background-color: #495057;
 }
 .content {
-  margin-left: 250px;
-  padding: 20px;
-}
-.card {
-  transition: transform 0.3s ease-in-out;
-}
-.card:hover {
-  transform: scale(1.05);
-}
-.card-icon {
-  font-size: 3rem;
-  color: rgb(155, 145, 145);
-}
-body {
+  width: 100%;
+  padding: 30px;
   background-color: #f8f9fa;
 }
+
 .profile-card {
-  margin: 50px auto;
-  max-width: 600px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
 }
+
 .profile-header {
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 30px;
 }
-.profile-header h2 {
-  font-weight: 600;
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
-.form-control,
-.form-select {
-  border-radius: 30px;
+
+.profile-info label {
+  font-weight: bold;
+  width: 200px;
 }
-.form-control[readonly],
-.form-select[disabled] {
-  background-color: #e9ecef;
-  color: black;
-  cursor: not-allowed;
+
+.profile-info span {
+  font-size: 18px;
 }
-.form-check-input[disabled] {
-  background-color: #e9ecef;
-  cursor: not-allowed;
+
+.form-check-label {
+  font-weight: normal;
+}
+
+.form-check-input:disabled {
+  cursor: default;
 }

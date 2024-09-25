@@ -31,75 +31,44 @@
                 <a class="nav-link" href="mess_bill.php"><i class="fas fa-lock"></i>
                 Update Password</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
         </ul>
     </div>
     <div class="content">
-    <div class="container">
-        <div class="profile-card">
-            <div class="profile-header">
-                <h2><i class="fas fa-user-circle"></i> User Profile</h2>
-                <p>View your details</p>
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <h2><i class="fas fa-user-circle"></i> User Profile</h2>
+                    <p>View your details</p>
+                </div>
+                <div class="profile-info">
+                    <label>Full Name:</label>
+                    <span>John Doe</span>
+                </div>
+                <div class="profile-info">
+                    <label>Registration No.:</label>
+                    <span>20241011234</span>
+                </div>
+                <div class="profile-info">
+                    <label>Email:</label>
+                    <span>johndoe@example.com</span>
+                </div>
+                <div class="profile-info">
+                    <label>Year of Study:</label>
+                    <span>Final Year</span>
+                </div>
+                <div class="profile-info">
+                    <label>Department:</label>
+                    <span>Computer Science</span>
+                </div>
+                <div class="profile-info">
+                    <label>Mess Bill Status:</label>
+                    <span>Unpaid</span>
+                </div>
             </div>
-            <form>
-                <!-- Name -->
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" value="John Doe" readonly>
-                </div>
-
-                <!-- Registration Number -->
-                <div class="form-group">
-                    <label for="regNo">Registration No.</label>
-                    <input type="text" class="form-control" id="regNo" value="20241011234" readonly>
-                </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" value="johndoe@example.com" readonly>
-                </div>
-
-                <!-- Year of Study (Dropdown) -->
-                <div class="form-group">
-                    <label for="year">Year of Study</label>
-                    <select class="form-select form-control" id="year" disabled>
-                        <option value="1st Year">1st Year</option>
-                        <option value="2nd Year">2nd Year</option>
-                        <option value="3rd Year">3rd Year</option>
-                        <option value="Final Year" selected>Final Year</option>
-                    </select>
-                </div>
-
-                <!-- Department (Dropdown) -->
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <select class="form-select form-control" id="department" disabled>
-                        <option value="Computer Science" selected>Computer Science</option>
-                        <option value="Information Technology">Information Technology</option>
-                        <option value="Electronics Engineering">Electronics Engineering</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
-                    </select>
-                </div>
-
-                <!-- Mess Bill Status -->
-                <div class="form-group">
-                    <label>Mess Bill Status</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="messBillStatus" id="paid" value="paid" disabled>
-                        <label class="form-check-label" for="paid">
-                            Paid
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="messBillStatus" id="unpaid" value="unpaid" checked disabled>
-                        <label class="form-check-label" for="unpaid">
-                            Unpaid
-                        </label>
-                    </div>
-                </div>
-            </form>
         </div>
-    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

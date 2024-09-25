@@ -14,4 +14,13 @@ try {
     // Handle connection error
     die("Connection failed: " . $e->getMessage());
 }
+
+
+$dbServername="localhost";
+$dbUsername="root";
+$dbPassword="";
+$dbName="mess_management";
+$dbconn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+
+
 ?>

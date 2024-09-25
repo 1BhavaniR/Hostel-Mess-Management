@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../includes/db.php'; // Adjust path to db.php
+require '../includes/dbconn.php'; // Adjust path to db.php
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_id'])) {
@@ -49,6 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="add_student.php"><i class="fas fa-user-plus"></i> Add Student</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin_approval.php"><i class="fas fa-user-plus"></i>View Requests</a>
             </li>
             <li class="nav-item">
                     <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>

@@ -1,14 +1,41 @@
+<?php
+session_start();
+include('student_dbconn.php'); // Ensure this points to your correct connection file
+
+// Debugging: Check if the session variable is set correctly
+if (!isset($_SESSION['regnumber'])) {
+    echo "Session variable regnumber is not set.";
+    exit(); // Stop execution if not set
+}
+
+$regNumber = $_SESSION['regnumber'];
+
+// Fetch user details from the database
+$query = "SELECT * FROM student_approved WHERE regnumber = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("s", $regNumber);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    // Fetch the user data
+    $user = $result->fetch_assoc();
+} else {
+    echo "User not found for regnumber: " . htmlspecialchars($regNumber); // Show the reg number for debugging
+    exit(); // Stop execution if user is not found
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-    <link rel="icon" href="assets/images/logos/tpgit_logo.png" type="image/png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="..\assets\css\user_profile.css">
-    
+    <link rel="stylesheet" href="../assets/css/user_profile.css">
 </head>
 <body>
     <div class="sidebar">
@@ -18,18 +45,16 @@
                 <a class="nav-link" href="student_dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link  active" href="user_profile.php"><i class="fas fa-user-plus"></i> User Profile</a>
+                <a class="nav-link active" href="user_profile.php"><i class="fas fa-user-plus"></i> User Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="mess_bill.php"><i class="fas fa-question-circle"></i> <!-- Question circle icon -->
-                Raise Queries</a>
+                <a class="nav-link" href="raise_queries.php"><i class="fas fa-question-circle"></i> Raise Queries</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="mess_bill.php"><i class="fas fa-lock"></i>
-                Update Password</a>
+                <a class="nav-link" href="update_password.php"><i class="fas fa-lock"></i> Update Password</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -45,28 +70,36 @@
                 </div>
                 <div class="profile-info">
                     <label>Full Name:</label>
-                    <span>John Doe</span>
+                    <span><?php echo htmlspecialchars($user['firstname'] . ' ' . $user['lastname']); ?></span>
                 </div>
                 <div class="profile-info">
-                    <label>Registration No.:</label>
-                    <span>20241011234</span>
+                    <label>Registration Number:</label>
+                    <span><?php echo htmlspecialchars($user['regnumber']); ?></span>
                 </div>
                 <div class="profile-info">
                     <label>Email:</label>
-                    <span>johndoe@example.com</span>
+                    <span><?php echo htmlspecialchars($user['email']); ?></span>
                 </div>
                 <div class="profile-info">
                     <label>Year of Study:</label>
-                    <span>Final Year</span>
+                    <span><?php echo htmlspecialchars($user['year']); ?></span>
                 </div>
                 <div class="profile-info">
                     <label>Department:</label>
-                    <span>Computer Science</span>
+                    <span><?php echo htmlspecialchars($user['department']); ?></span>
                 </div>
                 <div class="profile-info">
-                    <label>Mess Bill Status:</label>
-                    <span>Unpaid</span>
+                    <label>Room Number</label>
+                    <span><?php echo htmlspecialchars($user['roomno']); ?></span>
                 </div>
+                <div class="profile-info">
+                    <label>Block:</label>
+                    <span><?php echo htmlspecialchars($user['block']); ?></span>
+                </div>
+                <!-- <div class="profile-info">
+                    <label>Fees:</label>
+                    <span><?php echo htmlspecialchars($user['fees']); ?></span>
+                </div> -->
             </div>
         </div>
     </div>

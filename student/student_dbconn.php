@@ -23,4 +23,16 @@ $dbName="mess_management";
 $dbconn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 
 
+$servername = "localhost";
+$username = "root";      // Change this if you have a different username
+$password = "";          // Use an empty string if there's no password
+$database = "mess_management"; // Your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>

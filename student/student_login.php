@@ -3,7 +3,7 @@ session_start();
 include("student_dbconn.php"); // Make sure to update this path as necessary
 
 if (isset($_POST['login'])) {
-    $userId = $_POST['username']; // Use the same name as in the input field
+    $regnumber = $_POST['regnumber']; // Use the same name as in the input field
     $password = $_POST['password'];
     // $captchaResponse = $_POST['g-recaptcha-response'];
     // // Check CAPTCHA
@@ -15,13 +15,13 @@ if (isset($_POST['login'])) {
     // if (intval($responseKeys["success"]) !== 1) {
     //     echo "<script>alert('Please complete the CAPTCHA.');</script>";
     // } else{
-    if (empty($userId) || empty($password)) {
+    if (empty($regnumber) || empty($password)) {
         echo "<script>alert('Please enter both username and password.');</script>";
     } else {
         // Use a prepared statement to prevent SQL injection
         $sql = "SELECT * FROM student_approved WHERE regnumber = ?";
         $stmt = mysqli_prepare($dbconn, $sql);
-        mysqli_stmt_bind_param($stmt, 's', $userId);
+        mysqli_stmt_bind_param($stmt, 's', $regnumber);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
 
@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
             // Check if the passwords match
             if (password_verify($password, $row['password'])) {
                 // Success: Store userId in session and redirect to dashboard
-                $_SESSION['userId'] = $userId;
+                $_SESSION['regnumber'] = $regnumber;
                 echo "<script>alert('Login successful!'); window.location.href='student_dashboard.php';</script>";
             } else {
                 // Incorrect password
@@ -45,7 +45,12 @@ if (isset($_POST['login'])) {
     }
     }
 
-
+// Debugging: Check if session variable is set after login
+// if (isset($_SESSION['regnumber'])) {
+//     echo "Session variable 'regnumber' is set to: " . $_SESSION['regnumber'];
+// } else {
+//     echo "Session variable 'regnumber' is NOT set.";
+// }
 // Close connection
 mysqli_close($dbconn);
 ?>
@@ -130,7 +135,7 @@ mysqli_close($dbconn);
                     <form action="" method="POST"> <!-- Action set to empty for same-page submission -->
                         <div class="form-group">
                             <label for="username">Register Number</label>
-                            <input type="text" class="form-control" id="register-number" placeholder="Register Number" name="username" required>
+                            <input type="text" class="form-control" id="register-number" placeholder="Register Number" name="regnumber" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>

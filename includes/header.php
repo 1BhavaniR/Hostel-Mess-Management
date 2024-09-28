@@ -109,7 +109,8 @@
                         Log In
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="student_login.php">Student Login</a></li>
+                    <li><a class="dropdown-item" href="registration_form.php">Register</a></li>
+                        <li><a class="dropdown-item" href="student/student_login.php">Student Login</a></li>
                         <li><a class="dropdown-item" href="admin/admin_login.php">Admin Login</a></li>
                         <li><a class="dropdown-item" href="mess_manager/mess_dashboard.php">Mess Login</a></li>
                     </ul>

@@ -25,3 +25,14 @@ CREATE TABLE IF NOT EXISTS mess_menu (
     meal_time VARCHAR(10) NOT NULL,
     menu TEXT NOT NULL
 );
+CREATE TABLE mess_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Insert default users with hashed passwords (passwords: default1, default2)
+INSERT INTO mess_users (email, password) VALUES 
+('mess1@hostel.com', 'mess123'),
+('mess2@hostel.com', 'mess456');
+

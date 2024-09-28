@@ -54,13 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="grocery_bill.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
+                    <a class="nav-link" href="grocery.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mess_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a>
                 </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin_dashboard.php?action=update_password"><i class="fas fa-key"></i> Update Password</a>
+                <a class="nav-link" href="update_password.php"><i class="fas fa-key"></i> Update Password</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -76,23 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if (isset($error)): ?>
                     <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
                 <?php endif; ?>
-                
-                <?php if (isset($_GET['action']) && $_GET['action'] === 'update_password'): ?>
-                    <div class="col-lg-12">
-                        <h3>Update Password</h3>
-                        <form action="admin_dashboard.php?action=update_password" method="POST">
-                            <div class="form-group">
-                                <label for="new_password">New Password</label>
-                                <input type="password" class="form-control" id="new_password" name="new_password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm_password">Confirm Password</label>
-                                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-                            </div>
-                            <button type="submit" class="btn bg-dark text-white">Update Password</button>
-                        </form>
-                    </div>
-                <?php else: ?>
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow">
                             <div class="card-body text-center">
@@ -109,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <i class="card-icon fas fa-wallet"></i>
                                 <h5 class="card-title">Mess Bill</h5>
                                 <p class="card-text">View and manage mess bills for students.</p>
-                                <a href="mess.php" class="btn bg-dark text-white btn-primary">Go to Mess Bill</a>
+                                <a href="mess_bill.php" class="btn bg-dark text-white btn-primary">Go to Mess Bill</a>
                             </div>
                         </div>
                     </div>
@@ -127,13 +110,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="card shadow">
                             <div class="card-body text-center">
                                 <i class="card-icon fas fa-utensils"></i>
-                                <h5 class="card-title"></h5>
+                                <h5 class="card-title">Mess Menu</h5>
                                 <p class="card-text">View and manage mess menu for Hostel.</p>
                                 <a href="mess_menu.php" class="btn bg-dark text-white btn-primary">Go to Mess Menu</a>
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-body text-center">
+                                <i class="card-icon fas fa-box-open"></i>
+                                <h5 class="card-title">Purchase Item Record</h5>
+                                <p class="card-text">View the new items from the inventory.</p>
+                                <a href="purchase_record.php" class="btn bg-dark text-white btn-primary">Go to Purchase Item</a>
+                            </div>
+                        </div>
+</div>
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card shadow">
+        <div class="card-body text-center">
+            <i class="card-icon fas fa-dolly"></i>
+            <h5 class="card-title">Issue Item Record</h5>
+            <p class="card-text">View the Issue items from inventory.</p>
+            <a href="issue_record.php" class="btn bg-dark text-white btn-primary">Go to Issue Item</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card shadow">
+        <div class="card-body text-center">
+            <i class="card-icon fas fa-warehouse"></i>
+            <h5 class="card-title">Stock in Inventory</h5>
+            <p class="card-text">View current stock levels of inventory items.</p>
+            <a href="stock_inventory.php" class="btn bg-dark text-white btn-primary">Go to Stock Inventory</a>
+        </div>
+    </div>
+</div>
+
+                
             </div>
         </div>
     </div>

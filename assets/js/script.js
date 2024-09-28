@@ -6,9 +6,10 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-    // Initialize the carousel with a smoother transition
+    // Initialize the carousel with a faster automatic transition
     $('#carouselFacilities').carousel({
-        interval: 1000 // Adjust the interval for automatic sliding (in milliseconds)
+        interval: 1500, // 1.5 seconds
+        ride: 'carousel' // Automatically start the carousel
     });
 
     // Handle the scaling of items during transitions

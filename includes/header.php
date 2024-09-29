@@ -93,18 +93,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="home.php">Home</a>
+                    <a style="margin: 0px 40px 0px 270px;" class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="about.php">About</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="contact.php">Contact</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="User Guide.php">Reimbursement</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="User Guide.php">Reimbursement</a>
                 </li>
-                <li style="margin: 0px 125px 0px 25px " class="nav-item dropdown">
+                <li style="margin: 0px 125px 0px 40px " class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Log In
                     </a>

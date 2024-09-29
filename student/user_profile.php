@@ -51,6 +51,9 @@ if ($result->num_rows > 0) {
                 <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="mess_menu.php"><i class="fas fa-wallet"></i> Mess Menu</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="raise_queries.php"><i class="fas fa-question-circle"></i> Raise Queries</a>
             </li>
             <li class="nav-item">

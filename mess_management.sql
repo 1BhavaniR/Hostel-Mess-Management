@@ -60,3 +60,15 @@ CREATE TABLE IF NOT EXISTS `student_approved` (
     `photo` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`id`)
 );
+
+
+-- TABLE FOR STORING THE QUERIES 
+CREATE TABLE IF NOT EXISTS `queries` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `regnumber` VARCHAR(50) NOT NULL,
+    `student_name` VARCHAR(100) NOT NULL,
+    `query_area` VARCHAR(50) NOT NULL,
+    `query_text` TEXT NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`regnumber`) REFERENCES `student_approved`(`regnumber`) ON DELETE CASCADE
+);

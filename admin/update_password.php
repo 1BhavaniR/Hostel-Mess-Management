@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include '../includes/db.php';
+include '../includes/dbconn.php';
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

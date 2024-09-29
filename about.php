@@ -2,7 +2,11 @@
 
 <div class="content">
     <div class="container about mt-5">
+        <!-- Title and Background Paragraph with Opacity and Animation -->
         <h2 class="text-center mb-4">About Our College Hostels</h2>
+        <div class="bg-opacity p-4 mb-5 text-center fade-in">
+            <p>Welcome to our college hostels! We provide a safe, comfortable, and supportive living environment for our students. Our hostels are designed to foster a sense of community while offering all the necessary facilities to ensure a pleasant stay.</p>
+        </div>
 
         <div class="row">
             <!-- Boys' Hostels -->
@@ -10,9 +14,8 @@
                 <div class="card">
                     <img src="assets/images/hostels/b1.png" class="card-img-top" alt="Boys Hostel 1">
                     <div class="card-body">
-                        <h5 class="card-title">Boys' Hostel </h5>
-                        <p class="card-text">Welcome to B1 Hostel.The B1 Hostel offers accommodation for approximately 204 members within the college hostel premises,
-                            providing comfortable living spaces for our students.</p>
+                        <h5 class="card-title">Boys' Hostel</h5>
+                        <p class="card-text">Welcome to B1 Hostel. The B1 Hostel offers accommodation for approximately 204 members within the college hostel premises, providing comfortable living spaces for our students.</p>
                     </div>
                 </div>
             </div>
@@ -22,8 +25,7 @@
                     <img src="assets/images/hostels/b2.jpeg" class="card-img-top" alt="Boys Hostel 2">
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostel 2</h5>
-                        <p class="card-text">With space for approximately 201 members, the B2 Hostel provides accommodation within the college hostel,
-                            ensuring a convenient living environment for our students</p>
+                        <p class="card-text">With space for approximately 201 members, the B2 Hostel provides accommodation within the college hostel, ensuring a convenient living environment for our students.</p>
                     </div>
                 </div>
             </div>
@@ -33,8 +35,7 @@
                     <img src="assets/images/hostels/b3.jpeg" class="card-img-top" alt="Boys Hostel 3">
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostel 3</h5>
-                        <p class="card-text">Hosting around 153 members, the B3 Hostel serves as a comfortable residence for our students, 
-                            totally offers accommodation for approximately 120 students in Boy's Hostel contributing to a vibrant living community.</p>
+                        <p class="card-text">Hosting around 153 members, the B3 Hostel serves as a comfortable residence for our students, contributing to a vibrant living community.</p>
                     </div>
                 </div>
             </div>
@@ -44,7 +45,7 @@
                     <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel 1">
                     <div class="card-body">
                         <h5 class="card-title">Girls' Hostel 1</h5>
-                        <p class="card-text">A home away from home.Safe and secure living with all facilities.</p>
+                        <p class="card-text">A home away from home. Safe and secure living with all facilities.</p>
                     </div>
                 </div>
             </div>
@@ -54,13 +55,12 @@
                     <img src="assets/images/hostels/g2.jpeg" class="card-img-top" alt="Girls Hostel 2">
                     <div class="card-body">
                         <h5 class="card-title">Girls' Hostel 2</h5>
-                        <p class="card-text">A home away from home.Safe and secure living with all facilities.</p>
+                        <p class="card-text">A home away from home. Safe and secure living with all facilities.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Extra Facilities Section -->
         <div class="extra-facilities mt-5">
             <h3 class="text-center mb-4">Extra Facilities</h3>
             <div id="carouselFacilities" class="carousel slide" data-ride="carousel">
@@ -113,4 +113,40 @@
     </div>
 </div>
 
+<!-- JavaScript to Control the Carousel -->
+
+
+<!-- CSS for smoother scaling effect -->
+<style>
+.facility-item {
+    transition: transform 0.5s ease; /* Smoother scaling transition */
+}
+</style>
+
 <?php include('includes/footer.php'); ?>
+
+<!-- Additional CSS -->
+<style>
+.bg-opacity {
+    background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+    border-radius: 10px;
+    margin-bottom: 30px; /* Ensure space below */
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+</style>
+
+<!-- Additional JavaScript -->
+<script>
+$(document).ready(function() {
+    // Trigger the fade-in effect on page load
+    $('.fade-in').css('opacity', '1');
+});
+</script>

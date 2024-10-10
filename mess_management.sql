@@ -73,9 +73,6 @@ CREATE TABLE IF NOT EXISTS `student_approved` (
     `photo` VARCHAR(255) NOT NULL,
     PRIMARY KEY (`id`)
 );
-<<<<<<< HEAD
-
-
 -- TABLE FOR STORING THE QUERIES 
 CREATE TABLE IF NOT EXISTS `queries` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,4 +82,13 @@ CREATE TABLE IF NOT EXISTS `queries` (
     `query_text` TEXT NOT NULL,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`regnumber`) REFERENCES `student_approved`(`regnumber`) ON DELETE CASCADE
+);
+
+-- TABLE FOR STORING THE MESS LOGIN
+
+CREATE TABLE mess_users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20)
 );

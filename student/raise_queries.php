@@ -64,7 +64,7 @@ session_start(); // Start the session
                 <a class="nav-link" href="update_password.php"><i class="fas fa-lock"></i> Update Password</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a class="nav-link" href="stulogout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
         </ul>
     </div>

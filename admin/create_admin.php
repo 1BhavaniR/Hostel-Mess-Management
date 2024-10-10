@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include '../includes/db.php';
+include '../includes/dbconn.php';
 
 // Define default admin credentials
 $admins = [

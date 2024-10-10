@@ -40,7 +40,7 @@
             position: relative;
         }
         .navbar-nav .nav-link:hover {
-            color: #ffc107;
+            color: #fff;
             background-color: #444444;
             letter-spacing: 2px;
         }
@@ -49,7 +49,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: #ffc107;
+            background-color: #fff;
             bottom: 0;
             left: 50%;
             transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -59,7 +59,7 @@
             left: 0;
         }
         .navbar-nav .nav-item.active .nav-link {
-            color: #ffc107;
+            color: #fff;
             font-weight: bold;
         }
         .dropdown-menu {
@@ -112,7 +112,7 @@
                     <li><a class="dropdown-item" href="registration_form.php">Register</a></li>
                         <li><a class="dropdown-item" href="student/student_login.php">Student Login</a></li>
                         <li><a class="dropdown-item" href="admin/admin_login.php">Admin Login</a></li>
-                        <li><a class="dropdown-item" href="mess_manager/mess_dashboard.php">Mess Login</a></li>
+                        <li><a class="dropdown-item" href="mess_manager/mess_login.php">Mess Login</a></li>
                     </ul>
                 </li>
             </ul>

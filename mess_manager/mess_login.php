@@ -1,39 +1,46 @@
 <?php
 session_start();
-include '../includes/db.php'; // Ensure this file initializes $pdo
+include '../includes/dbconn.php'; // Ensure this file initializes $pdo
+
+// Initialize variables for error and success messages
+$error_message = '';
+$success_message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mess_email = $_POST['email'];
+    $mess_username = $_POST['username'];
     $mess_password = $_POST['password'];
 
     // Prepare a SQL statement to check mess user credentials
-    $stmt = $pdo->prepare("SELECT * FROM mess_users WHERE email = :email");
-    $stmt->bindParam(':email', $mess_email);
+    $stmt = $pdo->prepare("SELECT * FROM mess_users WHERE username = :username");
+    $stmt->bindParam(':username', $mess_username);
     $stmt->execute();
 
+    // Fetch the user data
     $mess_user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Check if the user exists and password matches (assumed plain text for now)
+    // Check if the user exists and verify the password
     if ($mess_user) {
-        if ($mess_password === $mess_user['password']) { // Use `password_verify` if passwords are hashed
-            // Set session variables
+        if (password_verify($mess_password, $mess_user['password'])) {
+            // Password matches, set session variables
             $_SESSION['mess_user_id'] = $mess_user['id'];
-            $_SESSION['mess_email'] = $mess_user['email'];
+            $_SESSION['mess_username'] = $mess_user['username'];
+            $_SESSION['mess_role'] = $mess_user['role'];
 
-            // Debugging - Ensure session data is set
-            // var_dump($_SESSION);
+            // Set success message
+            $success_message = "Login successful! Redirecting to your dashboard...";
 
-            // Redirect to the mess dashboard
-            header("Location: mess_dashboard.php");
-            exit(); // Stop further code execution after redirect
+            // Delay redirect by 2 seconds to allow the success message to display
+            header("refresh:2;url=mess_dashboard.php");
+            exit(); // Prevent further execution
         } else {
             // Error: Invalid password
             $error_message = "Invalid password. Please try again.";
         }
-    } else {
-        // Error: Invalid email
-        $error_message = "Invalid email. Please try again.";
-    }
+    // } else {
+    //     // Error: Invalid username
+    //     $error_message = "Invalid username. Please try again.";
+    // }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -49,13 +56,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
             <h3 class="text-center mb-4">Mess Sign In</h3>
-            <?php if (isset($error_message)) : ?>
+
+            <!-- Display the error message if there is one -->
+            <?php if (!empty($error_message)) : ?>
                 <div class="alert alert-danger"><?php echo $error_message; ?></div>
             <?php endif; ?>
+
+            <!-- Display the success message if login is successful -->
+            <?php if (!empty($success_message)) : ?>
+                <div class="alert alert-success"><?php echo $success_message; ?></div>
+            <?php endif; ?>
+
             <form action="" method="POST">
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>

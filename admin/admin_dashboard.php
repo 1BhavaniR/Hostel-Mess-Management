@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../includes/dbconn.php'; // Adjust path to db.php
+require '../includes/dbconn.php'; // Adjust path to dbconn.php
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_id'])) {

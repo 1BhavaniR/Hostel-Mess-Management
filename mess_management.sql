@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS mess_menu (
     meal_time VARCHAR(10) NOT NULL,
     menu TEXT NOT NULL
 );
-<<<<<<< HEAD
 CREATE TABLE mess_users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -37,40 +36,3 @@ INSERT INTO mess_users (email, password) VALUES
 ('mess1@hostel.com', 'mess123'),
 ('mess2@hostel.com', 'mess456');
 
-=======
-
-
---
--- Table for student registration requests
-CREATE TABLE IF NOT EXISTS `student_requests` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `firstname` VARCHAR(50) NOT NULL,
-    `lastname` VARCHAR(50) NOT NULL,
-    `regnumber` VARCHAR(50) NOT NULL,
-    `department` VARCHAR(30) NOT NULL,
-    `year` VARCHAR(6) NOT NULL,
-    `roomno` INT(3) NOT NULL,
-    `block` VARCHAR(2) NOT NULL,
-    `email` VARCHAR(100) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
-    `photo` VARCHAR(255) NOT NULL,
-    `is_approved` TINYINT(1) NOT NULL DEFAULT 0,
-    PRIMARY KEY (`id`)
-);
-
--- Table for approved students
-CREATE TABLE IF NOT EXISTS `student_approved` (
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
-    `firstname` VARCHAR(50) NOT NULL,
-    `lastname` VARCHAR(50) NOT NULL,
-    `regnumber` VARCHAR(50) NOT NULL,
-    `department` VARCHAR(30) NOT NULL,
-    `year` VARCHAR(6) NOT NULL,
-    `roomno` INT(3) NOT NULL,
-    `block` VARCHAR(2) NOT NULL,
-    `email` VARCHAR(100) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
-    `photo` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`id`)
-);
->>>>>>> 966450345c05393866e09887622c9b50ff8e13d2

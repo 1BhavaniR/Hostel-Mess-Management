@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/db.php'; // Ensure this file initializes $pdo
+include '../includes/dbconn.php'; // Ensure this file initializes $pdo
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mess_email = $_POST['email'];

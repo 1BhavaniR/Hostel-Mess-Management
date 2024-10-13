@@ -40,7 +40,7 @@
             position: relative;
         }
         .navbar-nav .nav-link:hover {
-            color: #ffc107;
+            color: #fff;
             background-color: #444444;
             letter-spacing: 2px;
         }
@@ -49,7 +49,7 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: #ffc107;
+            background-color: #fff;
             bottom: 0;
             left: 50%;
             transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -59,7 +59,7 @@
             left: 0;
         }
         .navbar-nav .nav-item.active .nav-link {
-            color: #ffc107;
+            color: #fff;
             font-weight: bold;
         }
         .dropdown-menu {
@@ -93,18 +93,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="home.php">Home</a>
+                    <a style="margin: 0px 40px 0px 270px;" class="nav-link" href="home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="about.php">About</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="contact.php">Contact</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 25px;" class="nav-link" href="User Guide.php">Reimbursement</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="User Guide.php">Reimbursement</a>
                 </li>
-                <li style="margin: 0px 125px 0px 25px " class="nav-item dropdown">
+                <li style="margin: 0px 125px 0px 40px " class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Log In
                     </a>
@@ -112,7 +112,7 @@
                     <li><a class="dropdown-item" href="registration_form.php">Register</a></li>
                         <li><a class="dropdown-item" href="student/student_login.php">Student Login</a></li>
                         <li><a class="dropdown-item" href="admin/admin_login.php">Admin Login</a></li>
-                        <li><a class="dropdown-item" href="mess_manager/mess_dashboard.php">Mess Login</a></li>
+                        <li><a class="dropdown-item" href="mess_manager/mess_login.php">Mess Login</a></li>
                     </ul>
                 </li>
             </ul>

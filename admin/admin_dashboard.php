@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../includes/dbconn.php'; // Adjust path to db.php
+require '../includes/dbconn.php'; // Adjust path to dbconn.php
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_id'])) {
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h4 class="text-center">Admin Dashboard</h4>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="admin_dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                <a class="nav-link  active" href="admin_dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="add_student.php"><i class="fas fa-user-plus"></i> Add Student</a>
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="update_password.php"><i class="fas fa-key"></i> Update Password</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin_dashboard.php?action=update_password"><i class="fas fa-key"></i> View Queries</a>
+                <a class="nav-link" href="view_queries.php"><i class="fas fa-question-circle"></i> View Queries</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>

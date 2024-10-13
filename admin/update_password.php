@@ -1,6 +1,7 @@
 <?php
-// Include the database connection
-include '../includes/db.php';
+// Include database connection
+include '../includes/dbconn.php';
+
 
 // Enable error reporting for debugging
 error_reporting(E_ALL);

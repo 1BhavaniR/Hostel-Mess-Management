@@ -27,7 +27,7 @@
                 <a class="nav-link" href="mess_menu.php"><i class="fas fa-wallet"></i> Mess Menu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="queries.php"><i class="fas fa-question-circle"></i> <!-- Question circle icon -->
+                <a class="nav-link" href="raise_queries.php"><i class="fas fa-question-circle"></i> <!-- Question circle icon -->
                 Raise Queries</a>
             </li>
             <li class="nav-item">

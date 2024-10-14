@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS mess_menu (
     meal_time VARCHAR(10) NOT NULL,
     menu TEXT NOT NULL
 );
-<<<<<<< HEAD
+
 CREATE TABLE mess_users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -37,7 +37,6 @@ INSERT INTO mess_users (email, password) VALUES
 ('mess1@hostel.com', 'mess123'),
 ('mess2@hostel.com', 'mess456');
 
-=======
 
 
 --

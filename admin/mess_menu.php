@@ -8,14 +8,25 @@ if (!isset($_SESSION['admin_id'])) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    $meal_times = ['Morning', 'Afternoon', 'Snacks', 'Dinner'];
+// Fetch the current menu from the database
+$current_menu = [];
+$days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+$meal_times = ['Morning', 'Afternoon', 'Snacks', 'Dinner'];
 
+foreach ($days as $day) {
+    foreach ($meal_times as $meal_time) {
+        $stmt = $pdo->prepare("SELECT menu FROM mess_menu WHERE day = ? AND meal_time = ?");
+        $stmt->execute([$day, $meal_time]);
+        $current_menu[$day][$meal_time] = $stmt->fetchColumn() ?: '';
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     foreach ($days as $day) {
         foreach ($meal_times as $meal_time) {
             $menu = $_POST[$day . $meal_time] ?? '';
 
+            // Use REPLACE to update or insert the menu for the specific day and meal_time
             $stmt = $pdo->prepare("REPLACE INTO mess_menu (day, meal_time, menu) VALUES (?, ?, ?)");
             $stmt->execute([$day, $meal_time, $menu]);
         }
@@ -34,7 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-    <style>
         .update-btn {
             margin-top: 20px;
             transition: background-color 0.3s, transform 0.3s;
@@ -52,17 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             padding: 20px;
             background-color: #f8f9fa;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .form-label {
-            margin-top: 10px;
-            font-weight: 600;
-        }
-        .card {
-            margin-top: 20px;
-        }
-        .current-menu {
-            border-top: 2px solid #007bff;
-            padding-top: 10px;
         }
         .meal-table {
             display: grid;
@@ -92,11 +91,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a class="nav-link" href="mess_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </div>
     </nav>
+
     <div class="container my-4">
         <div class="form-container">
             <h2 class="mb-4">Update Mess Menu</h2>
@@ -111,69 +111,64 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="meal-time">Saturday</div>
                     <div class="meal-time">Sunday</div>
 
+                    <!-- Morning Meals -->
                     <div class="meal-time">Morning</div>
-                    <input type="text" class="form-control meal-input" name="MondayMorning" placeholder="Enter Monday's morning menu">
-                    <input type="text" class="form-control meal-input" name="TuesdayMorning" placeholder="Enter Tuesday's morning menu">
-                    <input type="text" class="form-control meal-input" name="WednesdayMorning" placeholder="Enter Wednesday's morning menu">
-                    <input type="text" class="form-control meal-input" name="ThursdayMorning" placeholder="Enter Thursday's morning menu">
-                    <input type="text" class="form-control meal-input" name="FridayMorning" placeholder="Enter Friday's morning menu">
-                    <input type="text" class="form-control meal-input" name="SaturdayMorning" placeholder="Enter Saturday's morning menu">
-                    <input type="text" class="form-control meal-input" name="SundayMorning" placeholder="Enter Sunday's morning menu">
+                    <?php foreach ($days as $day): ?>
+                        <input type="text" class="form-control meal-input" name="<?= $day ?>Morning" placeholder="Enter <?= $day ?>'s morning menu" value="<?= htmlspecialchars($current_menu[$day]['Morning']) ?>">
+                    <?php endforeach; ?>
 
+                    <!-- Afternoon Meals -->
                     <div class="meal-time">Afternoon</div>
-                    <input type="text" class="form-control meal-input" name="MondayAfternoon" placeholder="Enter Monday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="TuesdayAfternoon" placeholder="Enter Tuesday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="WednesdayAfternoon" placeholder="Enter Wednesday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="ThursdayAfternoon" placeholder="Enter Thursday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="FridayAfternoon" placeholder="Enter Friday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="SaturdayAfternoon" placeholder="Enter Saturday's afternoon menu">
-                    <input type="text" class="form-control meal-input" name="SundayAfternoon" placeholder="Enter Sunday's afternoon menu">
+                    <?php foreach ($days as $day): ?>
+                        <input type="text" class="form-control meal-input" name="<?= $day ?>Afternoon" placeholder="Enter <?= $day ?>'s afternoon menu" value="<?= htmlspecialchars($current_menu[$day]['Afternoon']) ?>">
+                    <?php endforeach; ?>
 
+                    <!-- Snacks -->
                     <div class="meal-time">Snacks</div>
-                    <input type="text" class="form-control meal-input" name="MondaySnacks" placeholder="Enter Monday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="TuesdaySnacks" placeholder="Enter Tuesday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="WednesdaySnacks" placeholder="Enter Wednesday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="ThursdaySnacks" placeholder="Enter Thursday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="FridaySnacks" placeholder="Enter Friday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="SaturdaySnacks" placeholder="Enter Saturday's snacks menu">
-                    <input type="text" class="form-control meal-input" name="SundaySnacks" placeholder="Enter Sunday's snacks menu">
+                    <?php foreach ($days as $day): ?>
+                        <input type="text" class="form-control meal-input" name="<?= $day ?>Snacks" placeholder="Enter <?= $day ?>'s snacks menu" value="<?= htmlspecialchars($current_menu[$day]['Snacks']) ?>">
+                    <?php endforeach; ?>
 
+                    <!-- Dinner -->
                     <div class="meal-time">Dinner</div>
-                    <input type="text" class="form-control meal-input" name="MondayDinner" placeholder="Enter Monday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="TuesdayDinner" placeholder="Enter Tuesday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="WednesdayDinner" placeholder="Enter Wednesday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="ThursdayDinner" placeholder="Enter Thursday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="FridayDinner" placeholder="Enter Friday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="SaturdayDinner" placeholder="Enter Saturday's dinner menu">
-                    <input type="text" class="form-control meal-input" name="SundayDinner" placeholder="Enter Sunday's dinner menu">
+                    <?php foreach ($days as $day): ?>
+                        <input type="text" class="form-control meal-input" name="<?= $day ?>Dinner" placeholder="Enter <?= $day ?>'s dinner menu" value="<?= htmlspecialchars($current_menu[$day]['Dinner']) ?>">
+                    <?php endforeach; ?>
                 </div>
                 <button type="submit" class="btn btn-primary update-btn">Update Menu</button>
             </form>
         </div>
+
+        <!-- Current Menu Section -->
         <div class="card current-menu mt-4">
             <div class="card-body">
                 <h4>Current Menu</h4>
-                <p id="currentMenu">No updates yet.</p>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Morning</th>
+                            <th>Afternoon</th>
+                            <th>Snacks</th>
+                            <th>Dinner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($days as $day): ?>
+                            <tr>
+                                <td><?= $day ?></td>
+                                <td><?= htmlspecialchars($current_menu[$day]['Morning']) ?></td>
+                                <td><?= htmlspecialchars($current_menu[$day]['Afternoon']) ?></td>
+                                <td><?= htmlspecialchars($current_menu[$day]['Snacks']) ?></td>
+                                <td><?= htmlspecialchars($current_menu[$day]['Dinner']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('menuForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            let formData = new FormData(this);
 
-            fetch('admin_update_menu.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('currentMenu').innerHTML = 'Menu updated successfully!';
-                console.log(data);
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

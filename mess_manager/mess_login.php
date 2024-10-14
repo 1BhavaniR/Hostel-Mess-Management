@@ -1,10 +1,13 @@
 <?php
 session_start();
 include '../includes/dbconn.php'; // Ensure this file initializes $pdo
+<<<<<<< HEAD
+=======
 
 // Initialize variables for error and success messages
 $error_message = '';
 $success_message = '';
+>>>>>>> dec93112b8f4ce964c7c64e369a2badaa0a811a8
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mess_username = $_POST['username'];

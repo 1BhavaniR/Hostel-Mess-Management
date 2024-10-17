@@ -2,110 +2,41 @@
 
 <div class="content">
     <div class="container about mt-5">
-        <!-- Title and Background Paragraph with Opacity and Animation -->
+        <!-- Title and Background Paragraph -->
         <h2 class="text-center mb-4">About Our College Hostels</h2>
         <div class="bg-opacity p-4 mb-5 text-center fade-in">
             <p>Welcome to our college hostels! We provide a safe, comfortable, and supportive living environment for our students. Our hostels are designed to foster a sense of community while offering all the necessary facilities to ensure a pleasant stay.</p>
         </div>
 
-        <div class="row">
-            <!-- Boys' Hostels -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/images/hostels/b1.png" class="card-img-top" alt="Boys Hostel 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Boys' Hostel</h5>
-                        <p class="card-text">Welcome to B1 Hostel. The B1 Hostel offers accommodation for approximately 204 members within the college hostel premises, providing comfortable living spaces for our students.</p>
-                    </div>
-                </div>
+        <!-- Boys' Hostels Row -->
+        <div class="row text-center mb-5">
+            <div class="col-md-12">
+                <h3 class="text-center mb-4">Boys' Hostels</h3>
             </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/images/hostels/b2.jpeg" class="card-img-top" alt="Boys Hostel 2">
+            <div class="col-md-12 mb-4">
+                <div class="card hostel-card">
+                    <img src="assets/images/hostels/boys-hostel.jpg" class="card-img-top" alt="Boys Hostel">
                     <div class="card-body">
-                        <h5 class="card-title">Boys' Hostel 2</h5>
-                        <p class="card-text">With space for approximately 201 members, the B2 Hostel provides accommodation within the college hostel, ensuring a convenient living environment for our students.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/images/hostels/b3.jpeg" class="card-img-top" alt="Boys Hostel 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Boys' Hostel 3</h5>
-                        <p class="card-text">Hosting around 153 members, the B3 Hostel serves as a comfortable residence for our students, contributing to a vibrant living community.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Girls' Hostel 1</h5>
-                        <p class="card-text">A home away from home. Safe and secure living with all facilities.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/images/hostels/g2.jpeg" class="card-img-top" alt="Girls Hostel 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Girls' Hostel 2</h5>
-                        <p class="card-text">A home away from home. Safe and secure living with all facilities.</p>
+                        <h5 class="card-title">Boys' Hostels</h5>
+                        <p class="card-text">Explore comfortable and well-facilitated boys' hostels available on campus.</p>
+                        <a href="mens-hostel.php" class="btn btn-primary">Explore</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="extra-facilities mt-5">
-            <h3 class="text-center mb-4">Extra Facilities</h3>
-            <div id="carouselFacilities" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/water-tap.png" alt="Water Facility" class="facility-icon">
-                            <p>Water Facility</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/newspaper.png" alt="Newspaper and Magazines" class="facility-icon">
-                            <p>Newspaper and Magazines</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/gym.png" alt="Mini Gym" class="facility-icon">
-                            <p>Mini Gym</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/watch-tv.png" alt="TV Facility" class="facility-icon">
-                            <p>TV Facility</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/sports.png" alt="Sports Kit" class="facility-icon">
-                            <p>Sports Kit</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/bunk-bed.png" alt="Separate Cot, Table, and Chair" class="facility-icon">
-                            <p>Separate Cot, Table, and Chair</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="facility-item text-center">
-                            <img src="assets/icons/phone-booth.png" alt="STD Booth and Browsing Center" class="facility-icon">
-                            <p>STD Booth and Browsing Center</p>
-                        </div>
+        <!-- Girls' Hostels Row -->
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h3 class="text-center mb-4">Girls' Hostels</h3>
+            </div>
+            <div class="col-md-12 mb-4">
+                <div class="card hostel-card">
+                    <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel">
+                    <div class="card-body">
+                        <h5 class="card-title">Girls' Hostels</h5>
+                        <p class="card-text">Safe and secure accommodation for female students, ensuring comfort and convenience.</p>
+                        <a href="womens-hostel.php" class="btn btn-primary">Explore</a>
                     </div>
                 </div>
             </div>
@@ -113,28 +44,47 @@
     </div>
 </div>
 
-<!-- JavaScript to Control the Carousel -->
-
-
-<!-- CSS for smoother scaling effect -->
-<style>
-.facility-item {
-    transition: transform 0.5s ease; /* Smoother scaling transition */
-}
-</style>
-
-<?php include('includes/footer.php'); ?>
-
 <!-- Additional CSS -->
 <style>
+/* General Styling */
 .bg-opacity {
-    background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
     border-radius: 10px;
-    margin-bottom: 30px; /* Ensure space below */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the background */
 }
+
+.card-img-top {
+    height: 300px; /* Adjust the image height */
+    object-fit: cover;
+}
+.text-center {
+    color: #333; /* Darker, professional color */
+}
+.btn-primary {
+    background-color: #007bff; /* College blue color */
+    border-color: #007bff;
+    transition: background-color 0.3s ease; /* Smooth button color change */
+}
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Interactivity and Hover Effects */
+.hostel-card:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card {
+    border: none; /* Remove border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Additional Styling for Smooth Transitions */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1s forwards; /* Fade-in effect */
+    animation: fadeIn 1s forwards;
 }
 @keyframes fadeIn {
     to {
@@ -146,7 +96,8 @@
 <!-- Additional JavaScript -->
 <script>
 $(document).ready(function() {
-    // Trigger the fade-in effect on page load
-    $('.fade-in').css('opacity', '1');
+    $('.fade-in').css('opacity', '1'); // Trigger fade-in effect
 });
 </script>
+
+<?php include('includes/footer.php'); ?>

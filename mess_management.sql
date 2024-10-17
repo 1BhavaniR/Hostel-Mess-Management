@@ -39,8 +39,11 @@ INSERT INTO mess_users (email, password, role) VALUES
 ('mess1@hostel.com', 'mess123', 'warden1'),
 ('mess2@hostel.com', 'mess456', 'warden2');
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> b4a19ee095b11bb990ba6536b1416c385f3eaf6c
 
 --
 -- Table for student registration requests
@@ -94,6 +97,7 @@ CREATE TABLE mess_users (
     password VARCHAR(255) NOT NULL,
     role VARCHAR(20)
 );
+<<<<<<< HEAD
 CREATE TABLE grocery (
     id INT AUTO_INCREMENT PRIMARY KEY,
     seller_name VARCHAR(255) NOT NULL,
@@ -114,3 +118,6 @@ CREATE TABLE stock_table (
 ALTER TABLE grocery
 ADD COLUMN in_stock INT DEFAULT 0,
 ADD COLUMN issued INT DEFAULT 0;
+=======
+
+>>>>>>> b4a19ee095b11bb990ba6536b1416c385f3eaf6c

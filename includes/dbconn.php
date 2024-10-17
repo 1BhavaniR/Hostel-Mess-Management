@@ -10,17 +10,12 @@ try {
     
     // Set the PDO error mode to exception for better error handling
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Set default fetch mode to associative array
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    
 } catch (PDOException $e) {
     // Handle connection error
     die("Connection failed: " . $e->getMessage());
 }
-
-
-$dbServername="localhost";
-$dbUsername="root";
-$dbPassword="";
-$dbName="mess_management";
-$dbconn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
-
-
 ?>

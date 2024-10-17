@@ -18,7 +18,9 @@
             <li><a href="about.php">About Us</a></li>
             <li><a href="#">Reimbursement</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="signin.php">Log In</a></li>
+            <li><a href="admin/admin_login.php">Admin Log In</a></li>
+            <li><a href="student/student_login.php">Student Log In</a></li>
+
           </ul>
         </div>
         <div class="col-md-2 footer-col">
@@ -44,8 +46,8 @@
           <div class="d-flex flex-column align-items-start">
             <div class="pro-links mb-3">
               <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/school/tpgit/posts/?feedView=all" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://tpgit.edu.in/" class="text-white"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
         </div>

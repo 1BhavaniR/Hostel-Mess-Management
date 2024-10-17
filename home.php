@@ -39,16 +39,16 @@
     <i class="fas fa-quote-right"></i>
   </div>
     </div>
-    <!-- visionsection -->
+ <!-- visionsection -->
     <section id="vision" class="py-5">
   <div class="container">
     <div class="row">
       <!-- Vision Box -->
       <div class="col-md-10 mb-4">
-        <div class="card text-start h-100 border-0 shadow-none">
+        <div class="card  d-flex justify-content-center h-100 border-0 shadow-none">
           <div class="card-body p-4" style="background-color: #e0e8f2">
             <div class="text-center mb-4">
-              <h3 class="card-title text-start mt-1" style="color: black">Vision</h3>
+              <h3 class="card-title text-start mt-1 d-flex justify-content-center" style="color: black">Vision</h3>
             </div>
             <div class="visioncontent">
             <div>
@@ -95,7 +95,7 @@
         <div class="card text-start h-100 border-0 shadow-none">
           <div class="card-body p-4" style="background-color: #e0e8f2">
             <div class="text-center mb-4">
-              <h3 class="card-title text-start mt-1" style="color: black">Mission</h3>
+              <h3 class="card-title text-start mt-1 d-flex justify-content-center" style="color: black">Mission</h3>
             </div>
             <ol class="custom-list" style="color: black">
               <li>
@@ -117,7 +117,7 @@
       </div>
     </div>
   </div>
-</section>
+</section>   
 
 
     <section id="features" class="container my-5">
@@ -243,9 +243,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="provide" class="container my-5">
-      <h1 class="text-center mb-4">What we provide?</h1>
     </section>
 
 

@@ -54,16 +54,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="admin_approval.php"><i class="fas fa-user-plus"></i>View Requests</a>
             </li>
             <li class="nav-item">
-                    <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="grocery.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mess_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a>
-                </li>
+                <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
+            </li>
+           
+            <li class="nav-item">
+                <a class="nav-link" href="mess_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="update_password.php"><i class="fas fa-key"></i> Update Password</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin_grocery.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stock.php"><i class="fas fa-shopping-cart"></i> Stock Status</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="view_queries.php"><i class="fas fa-question-circle"></i> View Queries</a>
@@ -71,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <li class="nav-item">
                 <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
+            
         </ul>
     </div>
     <div class="content">
@@ -95,6 +100,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow">
                             <div class="card-body text-center">
+                                <i class="card-icon fas fa-clipboard-list fa-2x"></i> <!-- Changed icon to clipboard -->
+                                <h5 class="card-title">Students Request</h5>
+                                <p class="card-text">Approve and manage the students</p>
+                                <a href="admin_approval.php" class="btn bg-dark text-white btn-primary">Go to Students Request</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-body text-center">
+                                <i class="card-icon fas fa-user-graduate fa-2x"></i> <!-- Changed icon to user graduate -->
+                                <h5 class="card-title">Hostel Students</h5>
+                                <p class="card-text">View and manage the students</p>
+                                <a href="students_list.php" class="btn bg-dark text-white btn-primary">Go to Students</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card shadow">
+                            <div class="card-body text-center">
                                 <i class="card-icon fas fa-wallet"></i>
                                 <h5 class="card-title">Mess Bill</h5>
                                 <p class="card-text">View and manage mess bills for students.</p>
@@ -108,54 +134,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <i class="card-icon fas fa-shopping-cart"></i>
                                 <h5 class="card-title">Grocery Bill</h5>
                                 <p class="card-text">View and manage grocery bills for Hostel.</p>
-                                <a href="grocery.php" class="btn bg-dark text-white btn-primary">Go to Grocery Bill</a>
+                                <a href="admin_grocery.php" class="btn bg-dark text-white btn-primary">Go to Grocery Bill</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow">
                             <div class="card-body text-center">
-                                <i class="card-icon fas fa-utensils"></i>
-                                <h5 class="card-title">Mess Menu</h5>
-                                <p class="card-text">View and manage mess menu for Hostel.</p>
-                                <a href="mess_menu.php" class="btn bg-dark text-white btn-primary">Go to Mess Menu</a>
+                                <i class="card-icon fas fa-warehouse"></i>
+                                <h5 class="card-title">Stock in Inventory</h5>
+                                <p class="card-text">View current stock levels of inventory items.</p>
+                                <a href="admin_stock.php" class="btn bg-dark text-white btn-primary">Go to Stock Inventory</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card shadow">
-                            <div class="card-body text-center">
-                                <i class="card-icon fas fa-box-open"></i>
-                                <h5 class="card-title">Purchase Item Record</h5>
-                                <p class="card-text">View the new items from the inventory.</p>
-                                <a href="purchase_record.php" class="btn bg-dark text-white btn-primary">Go to Purchase Item</a>
-                            </div>
-                        </div>
-</div>
-
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="card shadow">
-        <div class="card-body text-center">
-            <i class="card-icon fas fa-dolly"></i>
-            <h5 class="card-title">Issue Item Record</h5>
-            <p class="card-text">View the Issue items from inventory.</p>
-            <a href="issue_record.php" class="btn bg-dark text-white btn-primary">Go to Issue Item</a>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="card shadow">
-        <div class="card-body text-center">
-            <i class="card-icon fas fa-warehouse"></i>
-            <h5 class="card-title">Stock in Inventory</h5>
-            <p class="card-text">View current stock levels of inventory items.</p>
-            <a href="stock_inventory.php" class="btn bg-dark text-white btn-primary">Go to Stock Inventory</a>
-        </div>
-    </div>
-</div>
-
-                
             </div>
         </div>
     </div>

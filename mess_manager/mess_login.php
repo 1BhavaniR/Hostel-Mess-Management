@@ -1,21 +1,14 @@
 <?php
 session_start();
 include '../includes/dbconn.php'; // Ensure this file initializes $pdo
-<<<<<<< HEAD
-=======
-
-// Initialize variables for error and success messages
-$error_message = '';
-$success_message = '';
->>>>>>> dec93112b8f4ce964c7c64e369a2badaa0a811a8
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mess_username = $_POST['username'];
+    $mess_email = $_POST['email'];
     $mess_password = $_POST['password'];
 
     // Prepare a SQL statement to check mess user credentials
-    $stmt = $pdo->prepare("SELECT * FROM mess_users WHERE username = :username");
-    $stmt->bindParam(':username', $mess_username);
+    $stmt = $pdo->prepare("SELECT * FROM mess_users WHERE email = :email");
+    $stmt->bindParam(':email', $mess_email);
     $stmt->execute();
 
     // Fetch the user data
@@ -23,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the user exists and verify the password
     if ($mess_user) {
-        if (password_verify($mess_password, $mess_user['password'])) {
+        if (password_verify($mess_password, $mess_user['password'])) {  // Use password_verify
             // Password matches, set session variables
             $_SESSION['mess_user_id'] = $mess_user['id'];
-            $_SESSION['mess_username'] = $mess_user['username'];
+            $_SESSION['mess_username'] = $mess_user['email'];
             $_SESSION['mess_role'] = $mess_user['role'];
 
             // Set success message
@@ -39,13 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Error: Invalid password
             $error_message = "Invalid password. Please try again.";
         }
-    // } else {
-    //     // Error: Invalid username
-    //     $error_message = "Invalid username. Please try again.";
-    // }
-}
+    } else {
+        // Error: Invalid email
+        $error_message = "Invalid email. Please try again.";
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Mess Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
@@ -72,12 +66,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <form action="" method="POST">
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="toggle-password fas fa-eye" id="togglePassword" onclick="togglePassword()"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="btn bg-dark text-white btn-block">Sign In</button>
                 <div class="text-center mt-3">
@@ -91,5 +92,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePassword');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
 </body>
 </html>

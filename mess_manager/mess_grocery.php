@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin - Grocery Bill</title>
+    <title>Mess - Grocery Bill</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -30,10 +30,6 @@
             margin-top: 20px;
         }
 
-        .chart-container {
-            margin-top: 20px;
-        }
-
         .remove-item {
             cursor: pointer;
             color: red;
@@ -51,20 +47,21 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <a class="navbar-brand" href="#">Mess Dashboard</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="mess_bill.php"><i class="fas fa-wallet"></i> Mess Bill</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="grocery.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
+                    <a class="nav-link" href="mess_grocery.php"><i class="fas fa-shopping-cart"></i> Grocery Bill</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mess_menu.php"><i class="fas fa-utensils"></i> Mess Menu</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    <a class="nav-link" href="mess_update_issued.php"><i class="fas fa-shopping-cart"></i> Issued</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                 </li>
             </ul>
         </div>
@@ -96,46 +93,10 @@
                 <button type="button" class="btn btn-secondary update-btn" id="addRowBtn">Add Item</button>
             </form>
         </div>
-        <!-- Pie Chart -->
-        <div class="card chart-container">
-            <div class="card-body">
-                <h4>Stock Overview</h4>
-                <canvas id="stockChart"></canvas>
-            </div>
-        </div>
     </div>
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById('stockChart').getContext('2d');
-        const stockChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['In Stock', 'Out of Stock'],
-                datasets: [{
-                    label: 'Stock Overview',
-                    data: [60, 40], // Example data: 60% In Stock, 40% Out of Stock
-                    backgroundColor: ['#4caf50', '#f44336']
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function (tooltipItem) {
-                                return `${tooltipItem.label}: ${tooltipItem.raw}%`;
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
         // Add new row to the table
         document.getElementById('addRowBtn').addEventListener('click', function () {
             const tableBody = document.querySelector('#groceryTable tbody');
@@ -183,9 +144,7 @@
             const itemSelect = newRow.querySelector('.item-select');
             const itemOtherInput = newRow.querySelector('.item-other');
             const quantityValue = newRow.querySelector('.quantity-value');
-            const quantityUnit = newRow.querySelector('.quantity-unit');
             const rateValue = newRow.querySelector('.rate-value');
-            const rateUnit = newRow.querySelector('.rate-unit');
             const totalPriceInput = newRow.querySelector('.total-price');
 
             // Show textbox when "Other" is selected for item
@@ -212,6 +171,28 @@
             newRow.querySelector('.remove-item').addEventListener('click', function () {
                 newRow.remove();
             });
+        });
+
+        // Update Bill Functionality
+        document.getElementById('updateBtn').addEventListener('click', function () {
+            const tableRows = document.querySelectorAll('#groceryTable tbody tr');
+            const groceryData = [];
+
+            tableRows.forEach(row => {
+                const seller = row.querySelector('input[placeholder="Enter seller name"]').value;
+                const itemName = row.querySelector('.item-select').value === 'Other' ? 
+                    row.querySelector('.item-other').value :
+                    row.querySelector('.item-select').value;
+                const quantity = row.querySelector('.quantity-value').value;
+                const rate = row.querySelector('.rate-value').value;
+                const totalPrice = row.querySelector('.total-price').value;
+                const purchasedDate = row.querySelector('input[type="date"]').value;
+
+                groceryData.push({ seller, itemName, quantity, rate, totalPrice, purchasedDate });
+            });
+
+            console.log(groceryData); // For testing purposes; replace with AJAX call to save data to the server
+            alert('Bill Updated Successfully!');
         });
     </script>
 </body>

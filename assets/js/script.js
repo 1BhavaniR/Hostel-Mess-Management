@@ -23,6 +23,29 @@ $(document).ready(function(){
         $('.carousel-item.active .facility-item').css('transform', 'scale(1.2)');
     });
 });
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.fade-up');
+
+    const options = {
+      root: null,
+      threshold: 0.1
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show'); // Add show class when in view
+          observer.unobserve(entry.target); // Stop observing after it becomes visible
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, options);
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
 
 
 

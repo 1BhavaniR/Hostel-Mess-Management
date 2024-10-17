@@ -71,7 +71,7 @@
             transition: background-color 0.3s ease;
         }
         .dropdown-menu .dropdown-item:hover {
-            background-color: #ffc107;
+            background-color: grey;
             color: black;
         }
         .content {
@@ -102,14 +102,13 @@
                     <a style="margin: 0px 40px;" class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a style="margin: 0px 40px;" class="nav-link" href="User Guide.php">Reimbursement</a>
+                    <a style="margin: 0px 40px;" class="nav-link" href="registration_form.php">Register</a>
                 </li>
                 <li style="margin: 0px 125px 0px 40px " class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Log In
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="registration_form.php">Register</a></li>
                         <li><a class="dropdown-item" href="student/student_login.php">Student Login</a></li>
                         <li><a class="dropdown-item" href="admin/admin_login.php">Admin Login</a></li>
                         <li><a class="dropdown-item" href="mess_manager/mess_login.php">Mess Login</a></li>

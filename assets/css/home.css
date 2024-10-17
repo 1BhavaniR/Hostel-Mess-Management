@@ -27,6 +27,18 @@ header {
   background-color: #343a40;
   z-index: 1000;
 }
+/* Custom CSS for fade-up effect */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Styling for active nav link */
 .navbar-nav .nav-item .nav-link.active {
   color: #f0a500; /* Highlight color for the active link */

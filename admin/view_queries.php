@@ -1,10 +1,11 @@
 <?php
 session_start();
-// Ensure that only admins can access this page
-// if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-//     header("Location: admin_login.php");
-//     exit;
-// }
+
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: admin_login.php'); // Redirect to login if not logged in
+    exit();
+}
+
 
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'mess_management');

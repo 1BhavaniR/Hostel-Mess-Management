@@ -15,11 +15,13 @@
             </div>
             <div class="col-md-12 mb-4">
                 <div class="card hostel-card">
-                    <img src="assets/images/hostels/boys-hostel.jpg" class="card-img-top" alt="Boys Hostel">
+                    <div class="image-overlay">
+                        <img src="assets/images/hostels/boys-hostel.jpg" class="card-img-top" alt="Boys Hostel">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Boys' Hostels</h5>
                         <p class="card-text">Explore comfortable and well-facilitated boys' hostels available on campus.</p>
-                        <a href="mens-hostel.php" class="btn btn-primary">Explore</a>
+                        <a href="mens-hostel.php" class="btn btn-dark">Explore</a>
                     </div>
                 </div>
             </div>
@@ -32,11 +34,13 @@
             </div>
             <div class="col-md-12 mb-4">
                 <div class="card hostel-card">
-                    <img src="assets/images/hostels/g1.jpeg" class="card-img-top" alt="Girls Hostel">
+                    <div class="image-overlay">
+                        <img src="assets/images/hostels/g2.jpeg" class="card-img-top" alt="Girls Hostel">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Girls' Hostels</h5>
                         <p class="card-text">Safe and secure accommodation for female students, ensuring comfort and convenience.</p>
-                        <a href="womens-hostel.php" class="btn btn-primary">Explore</a>
+                        <a href="womens-hostel.php" class="btn btn-dark">Explore</a>
                     </div>
                 </div>
             </div>
@@ -54,10 +58,37 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the background */
 }
 
-.card-img-top {
-    height: 300px; /* Adjust the image height */
-    object-fit: cover;
+.image-overlay {
+    position: relative;
 }
+
+.image-overlay img {
+    width: 100%;
+    height: 300px; /* Set a fixed height for cropping */
+    object-fit: cover; /* Crop the image while maintaining aspect ratio */
+}
+
+.image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Black overlay with light opacity */
+    z-index: 1;
+}
+
+.image-overlay img {
+    position: relative;
+    z-index: 0;
+}
+
+.card-body {
+    z-index: 2; /* Ensure text is above overlay */
+    position: relative;
+}
+
 .text-center {
     color: #333; /* Darker, professional color */
 }
